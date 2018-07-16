@@ -1,0 +1,7 @@
+{% for item in group.ITEMS %}
+    {{ AddBitrixActions(item) }}
+    <section class="lab-description" id="{{ GetEditAreaId(item) }}">
+        {{ item.PREVIEW_TEXT }}
+        <div class="full_text" style="display: none;"><p>{{ item.DETAIL_TEXT }}</p></div>
+    </section>
+{% endfor %}

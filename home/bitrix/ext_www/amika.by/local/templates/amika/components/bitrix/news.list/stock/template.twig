@@ -1,0 +1,53 @@
+<div class="order-detail">
+    <div class="order-detail-title">
+        <div class="order-detail__tip-l">
+            Используйте поиск, чтобы найти нужную позицию.
+        </div>
+        <div class="order-detail__tip-r none">
+            Закажите необходимое кол-во
+        </div>
+    </div>
+    <div class="order-detail-title">
+        <div class="order-detail__tip-l-1">
+            <a href="/personal/new-order/" class="btn gray-btn" target="">
+                Заказ Онлайн
+            </a>
+        </div>
+        <div class="order-detail__tip-r">
+            <a href="/personal/stock-order/" class=" btn gray-btn" target="">
+                Склад Онлайн
+            </a>
+        </div>
+    </div>
+
+    <table class="order-table search-table">
+        <thead>
+        <tr>
+            <th>Наименование товара</th>
+            {% if params.AVAILABILITY %}
+                <th>Наличие, кг</th>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in result.ITEMS %}
+            <tr class="{{ item.RED }}">
+                <td class="tit">
+                    <a
+                            href="#fb-modal-1"
+                            class="js-open-modal-2 stock-detail-ajax"
+                            data-link="{{ item.PROP.LINK }}"
+                            data-availablity="{{ params.AVAILABILITY }}"
+                            title="">{{ item.NAME }}</a>
+                </td>
+                {% if params.AVAILABILITY %}
+                    <td>{{ item.PROP.AVAILABILITY }}</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {{ result.NAV_STRING }}
+    <br>
+    <br>
+</div>

@@ -1,0 +1,114 @@
+<div class="content-body">
+    <div class="content-account">
+        {% if params.PERSONAL_INFO == 'Y' %}
+            <div class="container">
+                <div class="account-header clearfix">
+                    <h1 class="user-name">{{ result.USER.NAME }}
+                        <a
+                                href="/personal/setting/"
+                                class="setting"
+                                title="Настройка аккаунта"
+                        ></a>
+                    </h1>
+                    <a href="/personal/otk/" class="account-help btn gray-btn" title="">ПАСПОРТА ОТК</a>
+                    <a href="#fb-help" class="account-help js-open-modal btn gray-btn" title="">Помощь</a>
+                    {% if result.BLOCKED == 'N' %}
+                        <a href="/personal/new-order/" class="new-order btn" title="">Новый заказ</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% if result.BLOCKED == 'N' %}
+                <div class="container">
+                    <ul class="account-data">
+                        <li><span>Название организации:</span>{{ result.USER.UF_ORG_NAME }}</li>
+                        <li><span>УНП:</span>{{ result.USER.UF_ORG_UPN }}</li>
+                        <li><span>Банковские реквизиты:</span>{{ result.USER.UF_BANK_NAME }},
+                            ИНН {{ result.USER.UF_BANK_CODE }}, р/сч {{ result.USER.UF_BANK_ACCOUNT }}
+                        </li>
+                    </ul>
+                </div>
+            {% endif %}
+        {% endif %}
+        <div class="container">
+            <div class="tabs-wrap">
+                <div class="tabs">
+                    <span data-id="order-number" class="tab active">№ Заказа</span>
+                    <span data-id="date-shipment" class="tab">Дата отгрузки</span>
+                </div>
+                <div class="panels">
+                    <div data-id="order-number" class="panel active">
+                        <div class="order-detail">
+                            {% if result.BLOCKED == 'N' %}
+                                {% if params.PERSONAL_INFO == 'Y' %}
+                                    <div class="order-detail__title">Последние заказы:</div>
+                                {% endif %}
+                                {% if result.ITEMS is not empty %}
+                                    <table class="order-table">
+                                        <thead>
+                                        <tr>
+                                            <th>Номер заказа</th>
+                                            <th>Дата заказа</th>
+                                            <th>Статус</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for item in result.ITEMS %}
+                                            <tr id="order-history-{{ item.ID }}">
+                                                <td><a href="#fb-modal-3"
+                                                       class="ajax-order-detail"
+                                                       data-id="{{ item.ID }}">
+                                                        {{ item.NAME }}</a></td>
+                                                <td>{{ item.DATE }}</td>
+                                                <td class="status {{ item.PROP.STATUS_CLASS }}">{{ item.PROP.STATUS_NAME }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                    {% if params.PERSONAL_INFO == 'Y' %}
+                                        {% if result.NAV_STRING %}
+                                            <a
+                                                    href="/personal/history/"
+                                                    title="все заказы"
+                                                    class="all-orders btn"
+                                            ><span>
+                                Посмотреть все заказы
+                            </span>
+                                            </a>
+                                        {% endif %}
+                                    {% else %}
+                                        {% if result.NAV_STRING %}
+                                            {{ result.NAV_STRING }}
+                                        {% endif %}
+                                    {% endif %}
+                                {% else %}
+                                    <span>Записей не найдено</span>
+                                {% endif %}
+                            {% endif %}
+                            {% if result.BLOCKED == 'Y' %}
+                                <b>Для работы с сервисом заполните банковские реквизитыв настройках профиля!</b>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div data-id="date-shipment" class="panel">
+                        <div class="panel-aside">
+                            <div id="shipment-date"></div>
+                        </div>
+                        <div class="panel-main">
+                            <table class="order-table search-table shipment-table">
+                                <thead>
+                                <tr>
+                                    <th>Наименование товара</th>
+                                    <th>Количество (кг)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

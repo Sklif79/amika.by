@@ -1,0 +1,24 @@
+<b>{{ langMessages['TITLE_CONTACTS'] }} <br>
+    <select id="select-map-change" onchange="getval(this);">
+        {% for item in result.ITEMS %}
+            <option
+                    data-lat="{{ item.PROP.LAT|default(27.09717) }}"
+                    data-long="{{ item.PROP.LONG|default(53.677011) }}"
+                    value="{{ item.ID }}"
+            >{{ item.NAME }}</option>
+        {% endfor %}
+    </select>
+</b>
+<div class="contact-tabs">
+    {% for item in result.ITEMS %}
+        <div id="div{{ item.ID }}">
+            {{ item.PREVIEW_TEXT }}
+        </div>
+    {% endfor %}
+</div>
+<script>
+    $(document).ready(function ($) {
+        $('#div{{ result.START_ID }}').show();
+        $('[value="{{ result.START_ID }}"]').attr('selected', 'selected');
+    });
+</script>

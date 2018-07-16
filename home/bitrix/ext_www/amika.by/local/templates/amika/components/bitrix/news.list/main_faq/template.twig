@@ -1,0 +1,15 @@
+
+<div class="block-title">{{ langMessages['TITLE_FAQ'] }}</div>
+<!-- табы вакансий -->
+<div class="js-accordion faq-accordion">
+    {% for item in result.ITEMS %}
+        {{ AddBitrixActions(item) }}
+    <h3 id="{{ GetEditAreaId(item) }}" >{{ item.NAME }}</h3>
+    <div>
+        {{ item.PREVIEW_TEXT }}
+        <br><a href="{{ item.DETAIL_PAGE_URL }}" class="border-bottom-solid js-more">{{ langMessages['LINCK_FAQ_DETAIL_TEXT'] }}</a>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- // табы вакансий -->

@@ -1,0 +1,16 @@
+{% for item in group.ITEMS %}
+    {{ AddBitrixActions(item) }}
+    <section class="laboratories__preview" id="{{ GetEditAreaId(item) }}">
+        {% if tem.PREVIEW_PICTURE.SRC %}
+            <div class="laboratories__preview__video">
+                <img src="{{ item.PREVIEW_PICTURE.SRC }}" alt="{{ item.PREVIEW_PICTURE.ALT }}">
+                <div class="laboratories__preview__video__overlay">
+                    <a href="{{ item.PREVIEW_TEXT }}" target="_blank" class="video__overlay-play"></a>
+                </div>
+            </div>
+        {% endif %}
+        <div class="laboratories__preview__text">
+            {{ item.DETAIL_TEXT }}
+        </div>
+    </section>
+{% endfor %}

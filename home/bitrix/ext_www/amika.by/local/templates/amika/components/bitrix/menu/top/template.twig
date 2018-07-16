@@ -1,0 +1,38 @@
+{% if result.MENU_1 is not empty %}
+    <ul class="menu">
+        {% for item in result.MENU_1 %}
+            {% if item.CHILD is not empty %}
+                <li class="has-children"><a href="{{ item.LINK }}">{{ item.TEXT }}</a>
+                <ul class="sub-menu">
+                    {% for sub in item.CHILD %}
+                        <li><a href="{{ sub.LINK }}">{{ sub.TEXT }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <li><a href="{{ item.LINK }}">{{ item.TEXT }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endif %}
+{% if result.MENU_2 is not empty %}
+    <div class="more-click">
+        <i class="js-more-click"></i>
+        <div class="more-click__sub">
+            <ul>
+                {% for item in result.MENU_2 %}
+                    <li><a href="{{ item.LINK }}">{{ item.TEXT }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endif %}
+
+<ul class="lang">
+    {% if result.LANG== 'RU' %}
+        <li><a href="/en/" title="">EN</a></li>
+        <li class="active"><a href="" title="">RU</a></li>
+    {% else %}
+        <li class="active"><a href="" title="">EN</a></li>
+        <li><a href="/" title="">RU</a></li>
+    {% endif %}
+</ul>

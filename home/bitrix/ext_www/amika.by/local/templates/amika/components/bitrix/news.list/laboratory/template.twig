@@ -1,0 +1,11 @@
+{% for group in result.ITEMS %}
+    {% if group.CODE == "laboratories__preview" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/laboratory/type/laboratories__preview.twig' %}
+    {% endif %}
+    {% if group.CODE == "laboratories__droptabs" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/laboratory/type/laboratories__droptabs.twig' %}
+    {% endif %}
+    {% if group.CODE == "lab-description" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/laboratory/type/lab-description.twig' %}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,12 @@
+<section class="prod-video">
+    <div class="prod-video__title">{{ group.NAME }}:</div>
+    {% for item in group.ITEMS %}
+        {{ AddBitrixActions(item) }}
+        <div class="laboratories__preview__video" id="{{ GetEditAreaId(item) }}">
+            <img src="{{ item.PREVIEW_PICTURE.SRC }}" alt="{{ item.PREVIEW_PICTURE.ALT }}">
+            <div class="laboratories__preview__video__overlay">
+                <a target="_blank" href="{{ item.PREVIEW_TEXT }}" class="video__overlay-play"></a>
+            </div>
+        </div>
+    {% endfor %}
+</section>

@@ -1,0 +1,647 @@
+.textarea-custom-placeholder {
+    top: 3px;
+    color: #999;
+}
+
+.order-detail__tip-l {
+    color: #e31e24;
+    opacity: 0;
+
+}
+
+.map-area__addres {
+    min-height: 500px;
+    height: auto;
+}
+
+.map-area__addres li:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main-slider .owl-dots .owl-dot {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 4px;
+    margin-left: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.main-slider .owl-dots .owl-dot.active {
+    background: #808080;
+    border: 1px solid #808080;
+}
+
+.main-slider .owl-dots {
+    text-align: center;
+    bottom: 11px;
+    left: 0;
+    right: 0;
+}
+
+.main-slider .owl-carousel .owl-controls .owl-nav .owl-next {
+    right: 25%;
+}
+
+.main-slider .owl-carousel .owl-controls .owl-nav .owl-prev {
+    left: 25%;
+}
+
+.main-slider .owl-controls {
+    width: 100%;
+}
+
+.main-slider .owl-carousel .owl-controls .owl-nav .owl-prev, .main-slider .owl-carousel .owl-controls .owl-nav .owl-next {
+    top: inherit;
+    bottom: 21px;
+}
+
+.main-slider .owl-carousel .owl-controls .owl-nav .owl-next:before {
+    content: '\f105';
+}
+
+.main-slider .owl-carousel .owl-controls .owl-nav .owl-prev:before {
+    content: '\f104';
+}
+
+/*Страница поиска паспортов качества лаборатории ОТК*/
+.passport-search {
+    margin-top: 36px;
+}
+
+.passport-search .order-search {
+    display: flex;
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.passport-search .search__txt {
+    padding: 0 40px 0 10px;
+    border: 1px solid #cccccc;
+    background: url("../amika/images/i/ico-order-search.png") no-repeat center right 9px;
+    width: 100%;
+}
+
+.passport-search .search__submit {
+    margin-left: 10px;
+    display: block;
+    float: right;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 13px 31px;
+    background: #e31e24;
+    font-family: "MyriadPro-Bold", sans-serif;
+    border: none;
+    outline: none;
+}
+
+.reset-btn {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    height: 38px;
+    width: 38px;
+    border: none;
+    text-indent: 9999px;
+    padding: 0;
+    background: url('../amika/images/i/input-clearable-x.png') center no-repeat #fff;
+    z-index: -10;
+    opacity: 0;
+}
+
+.reset-btn.active {
+    z-index: 10;
+    opacity: 1;
+}
+
+.order-search__year {
+    flex: none;
+    /*padding: 0 10px;*/
+    /*padding-right: 10px;*/
+    border: 1px solid #cccccc;
+    margin-right: 20px;
+    /*position: relative;*/
+    width: 126px;
+    /*line-height: 38px;*/
+    /*font-size: 14px;*/
+    /*background: url("../amika/images/i/arrow-bottom.png") no-repeat center right 12px;*/
+
+}
+
+.order-search__year .select2-container--default .select2-selection--single {
+    border: none;
+    height: 38px;
+    line-height: 38px;
+}
+
+.order-search__year .select2-container--default .select2-selection--single .select2-selection__rendered {
+    height: 38px;
+    line-height: 38px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding: 0 10px;
+    width: 126px;
+    font-family: "MyriadPro-Regular", sans-serif;
+    font-size: 14px;
+}
+
+.order-search__year .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 38px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 9px;
+    background: url("../amika/images/i/arrow-bottom.png") center no-repeat;
+}
+
+.order-search__year select {
+    opacity: 0;
+}
+
+.select2-container--open .select2-dropdown--below {
+    min-width: 126px;
+}
+
+.select2-container--open .select2-dropdown {
+    left: -1px;
+    top: 1px;
+}
+
+.select2-container--focus.select2-container--open .order-search__year .select2-container--default .select2-selection--single .select2-selection__arrow {
+    transform: rotate(180deg);
+}
+
+.order-search__year .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: none;
+}
+
+.order-search__year ul {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 100%;
+    z-index: 20;
+    background: #fff;
+    border: 1px solid #cccccc;
+    max-height: 200px;
+    overflow-y: scroll;
+    display: none;
+
+}
+
+.order-search__year:hover ul {
+    display: block;
+}
+
+.order-search__year ul li {
+    padding: 0 10px;
+    text-align: center;
+}
+
+.order-search__year ul li:hover {
+    background: #f0f0f0;
+}
+
+.passport-table th, .passport-table td {
+    text-align: left;
+}
+
+.passport-table.order-table tr:hover td {
+    background: #f54040;
+    color: #fff;
+    font-weight: bold;
+}
+
+.passport-table.order-table tr:hover td a {
+    color: #fff;
+    border-color: rgba(255, 255, 255, .2);
+}
+
+.passport-table.order-table tr td a:hover {
+    /*border-color: rgba(255,255,255,1);*/
+}
+
+.passport-search *, .passport-table * {
+    transition: 0s !important;
+}
+
+.single-goods__second-level__option li {
+    display: flex;
+}
+
+.option-wrap {
+    padding-left: 20px;
+    margin-bottom: -5px;
+}
+
+.single-goods__second-level__option .option-data-pic {
+    margin-bottom: 5px;
+}
+
+.single-goods__second-level__option li .label {
+    white-space: nowrap;
+}
+
+.list-ex-1 li {
+    color: #232323;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 21px;
+}
+
+.droptabs-data__slider .owl-prev, .droptabs-data__slider .owl-next {
+    top: 50%;
+    margin-top: -20px;
+}
+
+.owl-item span {
+    display: none !important;
+}
+
+.droptabs__content-item__body:after {
+    content: "";
+    display: table;
+    clear: both;
+    font-size: 0;
+    visibility: hidden;
+}
+
+.droptabs-data__slider {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    max-width: 200px;
+}
+
+.then-colored__item__overlay {
+    padding: 10px;
+    text-align: center;
+}
+
+.then-colored__item__overlay__link {
+    position: static;
+    margin-top: 10px;
+}
+
+.fancybox-img-right:after {
+    content: '';
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    clear: both;
+}
+
+.fancybox-img-right .right-side {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.two-columns {
+    column-count: 2;
+    column-gap: 50px;
+    padding: 20px 0;
+}
+
+.stages-prod__item:last-of-type .title::after {
+    display: none;
+}
+
+.js--droptabs-data__slider.slick-dotted.slick-slider {
+    width: auto;
+    float: left;
+}
+
+.droptabs__next, .droptabs__prev {
+    width: 20px;
+    height: 38px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    margin-top: -19px;
+    cursor: pointer;
+}
+
+.droptabs__next {
+    right: 22px;
+    background: url(/local/templates/amika/amika/css/../images/i/nav-arrow-right.png) no-repeat center;
+}
+
+.droptabs__prev {
+    left: 22px;
+    background: url(/local/templates/amika/amika/css/../images/i/nav-arrow-left.png) no-repeat center;
+}
+
+.js--droptabs-data__slider .slick-dots {
+    display: block !important;
+    bottom: 10px;
+}
+
+.js--droptabs-data__slider .slick-dots li {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+}
+
+.js--droptabs-data__slider .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .75);
+}
+
+.js--droptabs-data__slider .slick-dots li.slick-active button {
+    background: #e31e24;
+}
+
+.js--droptabs-data__slider .slick-dots li button:before {
+    display: none;
+}
+
+.tabs {
+    font-size: 0;
+    line-height: 0;
+}
+
+.tabs-wrap {
+    margin: 30px 0;
+}
+
+.tabs-wrap .order-table {
+    margin-bottom: 0;
+}
+
+.tabs-wrap .order-detail {
+    padding-top: 0;
+}
+
+.tab {
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #E6E6E6;
+    height: 41px;
+    line-height: 39px;
+    background: #F3F3F3;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 29px;
+    font-size: 16px;
+    position: relative;
+    /*border-bottom: none;*/
+}
+
+.tab:not(:first-of-type) {
+    border-left: none;
+}
+
+.tab.active {
+    cursor: default;
+    background: #fff;
+    border-top: 2px solid #E31E24;
+    border-bottom: none;
+    top: 1px;
+}
+
+.panel {
+    display: none;
+    border: 1px solid #e6e6e6;
+    padding: 20px 15px 25px;
+}
+
+.panel.active {
+    display: block;
+}
+
+.panels {
+    margin-top: -1px;
+}
+
+.shipment-table th:last-of-type, .shipment-table td:last-of-type {
+    width: 170px;
+    text-align: left;
+}
+
+.shipment-table th, .shipment-table td {
+    padding-left: 25px;
+}
+
+.panel * {
+    box-sizing: border-box;
+}
+
+.panel-aside {
+    width: 280px;
+    margin-right: 21px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.panel-main {
+    display: inline-block;
+    width: calc(100% - 280px - 25px);
+    vertical-align: top;
+}
+
+#shipment-date .ui-datepicker {
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid #E6E6E6;
+}
+
+.order-detail__title {
+    display: none;
+}
+
+#ui-datepicker-div {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .map-area__addres, .map-contacts {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .active-btns a:last-of-type {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    .about-best__item.best-1 .button-area .slogan {
+        padding: 0 38px;
+    }
+
+    .passport-search .search__submit {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .other-content-header__data .activiti li:nth-of-type(1) {
+        margin-right: 0;
+    }
+
+    .other-content-header__data .activiti li {
+        margin-bottom: 10px;
+    }
+
+    .other-content-header__data .activiti li:nth-of-type(2) {
+        margin-bottom: 0;
+    }
+
+    .other-content-header__data .activiti li:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    .order-table th {
+        line-height: normal;
+    }
+
+    .tabs-wrap .order-detail {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .tabs-wrap {
+        opacity: 0;
+        margin: 30px -15px;
+    }
+
+    .tab {
+        display: block;
+        border: 1px solid #E6E6E6;
+        background: #fff;
+        padding-left: 15px;
+        padding-right: 35px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .tab::after {
+        width: 12px;
+        height: 6px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -3px;
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: 16px;
+        line-height: 7px;
+        transition: 0.3s;
+    }
+
+    .tab:not(:first-of-type) {
+        border-left: 1px solid #E6E6E6;
+        margin-top: -1px;
+    }
+
+    .tab.active {
+        cursor: pointer;
+        color: #E31E24;
+        border: 1px solid #E6E6E6;
+        top: 0;
+    }
+
+    .tab.active::after {
+        transform: rotate(180deg);
+    }
+
+    .panel {
+        padding: 0;
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .panel-aside {
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .panel-main {
+        display: block;
+        width: auto;
+        /*margin-left: -15px;*/
+        /*margin-right: -15px;*/
+    }
+
+    .content-account .order-table tbody tr:hover td:first-child:before {
+        box-shadow: none;
+    }
+
+    .ui-datepicker .ui-datepicker-next:after {
+        margin-left: -14px;
+    }
+
+    .shipment-table th:last-of-type, .shipment-table td:last-of-type {
+        width: 134px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .active-btns .btn {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .two-columns {
+        column-count: 1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-slider__item {
+        height: 250px;
+        padding-top: 90px;
+    }
+
+    .main-slider__item .txt *, .main-slider__item .container img {
+        display: none;
+    }
+
+    .main-slider__item .txt p:first-of-type {
+        display: block;
+    }
+
+    .account-prv .account-header {
+        padding-bottom: 17px;
+    }
+
+    .account-prv .account-header > a {
+        margin-bottom: 10px;
+    }
+
+    .account-prv .account-header > a:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .g-recaptcha {
+        /* width: 280px!important; */
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .order-table.responsive tr td:last-of-type {
+        max-width: 80px;
+    }
+
+}
+

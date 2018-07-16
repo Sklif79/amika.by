@@ -1,0 +1,18 @@
+<div class="aside-related-news">
+    <div class="aside-related-news__title">
+        <span>Читают на эту тему:</span>
+        <a href="/news/" class="related-news__see-all">
+            все новости
+        </a>
+    </div>
+    {% for item in result.ITEMS %}
+    {{ AddBitrixActions(item) }}
+    <div class="aside-related-news__item" id="{{ GetEditAreaId(item) }}">
+        <div class="aside-related-news__item__date">{{ item.DISPLAY_ACTIVE_FROM }}</div>
+        <h2 class="aside-related-news__item__title"><a href="{{ item.DETAIL_PAGE_URL }}"
+                                                       title="{{ item.NAME }}">{{ item.NAME }}</a>
+        </h2>
+    </div>
+    {% endfor %}
+    <a href="/news/" class="related-news__see-all hidden-xs">все новости</a>
+</div>

@@ -1,0 +1,40 @@
+<div class="content-body">
+    <div class="container">
+        <section class="then-colored">
+            <div class="then-colored__list clearfix">
+                {% for item in result.ITEMS %}
+                    <div class="then-colored__card">
+                        <div class="then-colored__card__row clearfix">
+                            {% for el in item %}
+                                <div class="then-colored__card__col {{ el.col }}">
+                                    <div class="then-colored__item {{ el.height }}">
+                                        {% if el.IMG == false %}
+                                            <h2 class="then-colored__item__more-title">{{ el.NAME }}</h2>
+                                            <a
+                                                    href="{{ el.DETAIL_PAGE_URL }}"
+                                                    class="then-colored__item__more-link btn"
+                                                    title="{{ el.NAME }}"
+                                            >Смотреть все</a>
+                                        {% else %}
+                                            <img src="{{ el.IMG }}" alt="{{ el.NAME }}">
+                                            <div class="then-colored__item__overlay">
+                                                <a
+                                                        href="{{ el.ORG }}"
+                                                        title="{{ el.NAME }}"
+                                                        class="zoom then-colored__item__zoom"
+                                                ><span>Увеличить</span></a>
+                                                <a href="{{ el.DETAIL_PAGE_URL }}" title=""
+                                                   class="then-colored__item__overlay__link"><span>{{ el.NAME }}</span></a>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</div>
+

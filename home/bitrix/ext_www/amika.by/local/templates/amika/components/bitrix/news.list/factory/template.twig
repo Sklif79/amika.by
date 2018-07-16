@@ -1,0 +1,11 @@
+{% for key,group in result.ITEMS %}
+    {% if key == "production-area" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/factory/type/production-area.twig' %}
+    {% endif %}
+    {% if key == "stage-prod" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/factory/type/stage-prod.twig' %}
+    {% endif %}
+    {% if key == "prod-video" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/factory/type/prod-video.twig' %}
+    {% endif %}
+{% endfor %}

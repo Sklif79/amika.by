@@ -1,0 +1,15 @@
+<div class="about-teaser-amika" style="background-image: url({{ item.DETAIL_PICTURE }})" id="{{ GetEditAreaId(item) }}">
+    <div class="container">
+        <div class="about-teaser-amika__wr">
+            <div class="flex-row">
+                <img src="{{ item.PREVIEW_PICTURE }}" alt="">
+                <div class="text">
+                    <div class="about-teaser-amika__title">{{ item.NAME }}</div>
+                    <div class="text-descr">
+                        {{ item.PREVIEW_TEXT }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

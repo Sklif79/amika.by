@@ -1,0 +1,32 @@
+<form action="/ajax/" id="basket-stock-form-ajax" class="form-ajax" method="post">
+    <input type="hidden" name="ENTITY" value="BASKET">
+    <input type="hidden" name="ACTION" value="ADD-ITEM">
+    <div class="store-modal__header">
+        <div class="title">{{ result.HEAD }}</div>
+        <a href="#fb-help" class="help js-open-modal-kosty" title=""><span>Помощь</span></a>
+    </div>
+    <table class="order-table responsive">
+        <thead>
+        <tr>
+            <th>Наименование</th>
+            <th>Доступно на складе (кг)</th>
+            <th>Заказать (кг)</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in result.ITEMS %}
+            <tr>
+                <td>{{ item.NAME }}</td>
+                <td>{{ item.PROP.AVAILABILITY }}</td>
+                <td>
+                    <input class="counter-input" name="ID[{{ item.ID }}]" value="" data-validation="number"
+                           placeholder="Введите кол-во (кг)"
+                           type="text">
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit" class="btn continue">Продолжить заказ</button>
+    <div class="clearfix"></div>
+</form>

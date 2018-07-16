@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Заголовок | Амика</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="cmsmagazine" content="aa4cc816c3e233bc68ec4386b3eabcf3" />
+		<link rel="shortcut icon" href="images/i/favicon.ico">
+		<!-- CSS include -->
+		<link rel = "stylesheet" href = "libs/bootstrap/grid-core-3.3.1.css" /> 
+		<link rel = "stylesheet" href = "libs/owl-carousel/assets/owl.carousel.css" />
+		<link rel = "stylesheet" href = "libs/owl-carousel/assets/animate.css" />
+		<link rel = "stylesheet" href = "fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel = "stylesheet" href = "libs/fancybox/jquery.fancybox.css" />	
+		<link rel = "stylesheet" href = "libs/jquery-form-validator/theme-default.css" />
+		<link rel = "stylesheet" href = "libs/responsive-table/jquery.rtResponsiveTables.css" />
+		<!-- // CSS include -->
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<!--[if lt IE 9]>
+			<script src="libs/html5shiv/es5-shim.min.js"></script>
+			<script src="libs/html5shiv/html5shiv.min.js"></script>
+			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="libs/respond/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/media.css" />
+		<!-- яндекс карта -->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script type="text/javascript">			
+			ymaps.ready(init);
+			var myMap, 
+				myPlacemark;
+
+			function init(){ 
+				myMap=new ymaps.Map("map", {
+					center: [53.677011,27.097172],
+					zoom: 14,
+					controls: ["zoomControl","geolocationControl"]
+				}); 					
+				var myPlacemark=new ymaps.Placemark([53.677011,27.097172], {}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'images/i/map-mark.png',
+					iconImageSize: [129,34],
+					iconImageOffset:[-17, -64]
+				});				
+				myMap.geoObjects.add(myPlacemark);
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div class="bd-site">
+		
+			<div class = "b-fixed-footer">
+			<div class = "b-footer-padding">
+			
+			<div class="mobile-aside">
+				<div class="mobile-aside__header clearfix">
+					<form class="header__search mobile-aside__search search">
+						<input class="search__txt" value="" placeholder="Поиск..." type="search">
+						<input type="submit" class="search__submit" value="">
+					</form>
+					<div class="back js-back clerafix">Назад</div>
+				</div>
+				<a href="" title="" class="sklad-online"><span>Склад-онлайн</span></a>
+				<ul class="mobile-menu">
+					<li><a href="" title="">КАТАЛОГ</a></li>
+					<li><a href="" title="">ПРОИЗВОДСТВО</a></li>
+					<li><a href="" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+					<li><a href="" title="">FAQ</a></li>
+					<li><a href="" title="">НОВОСТИ</a></li>
+					<li><a href="" title="">КОНТАКТЫ</a></li>
+					<li><a href="" title="">Особенности нанесения ПК</a></li>
+					<li><a href="" title="">Мастер-классы, семинары</a></li>
+					<li><a href="" title="">Видео</a></li>
+				</ul>
+				<div class="header__phone-content mobile__phone-content">
+					<div>
+						<b>Для зарубежных партнеров:</b>
+						<p>
+							<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+							<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+							<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+							skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+							<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a>
+						</p>
+					</div>
+					<div>
+						<b>Для партнеров Республики Беларусь:</b>
+						<p>
+							<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+							<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+						</p>
+					</div>	
+					<div>
+						<b>Юридический и почтовый адрес:</b>
+						<p>ул. Строителей, 6, г. Держинск, <br>Минская обл., Беларусь, 222720 </p>
+					</div>	
+				</div>
+				<a href="" title="" class="re-call boder-dott">Обратный звонок</a>
+				<ul class="lang clerfix">
+					<li><a href="" title="">EN</a></li>
+					<li class="active"><a href="" title="">RU</a></li>
+				</ul>
+			</div>
+		
+		<div class="wr-header">
+		
+			<header class="mobile-header clearfix">
+				<img src="images/i/mobile-logo.png" alt="">
+				<div class="menu-trigger js-menu-trigger"></div>
+				<div class="search-trigger"></div>
+			</header>
+			
+			<header class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+						<a href="/" class="header__logo">
+							<img src="images/i/logo.png" alt="">
+							<div>Порошковые краски</div>
+						</a>
+						</div>
+						<div class="col-lg-9">
+							<nav class="clearfix">
+								<ul class="menu">
+									<li><a href="" title="">КАТАЛОГ</a></li>
+									<li class="has-children"><a href="" title="">ПРОИЗВОДСТВО</a>
+										<ul class="sub-menu">
+											<li><a href="" title="">ПРОИЗВОДСТВО</a></li>
+											<li><a href="" title="">Лаборатория</a></li>
+										</ul>
+									</li>
+									<li><a href="" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+									<li><a href="" title="">FAQ</a></li>
+									<li><a href="" title="">НОВОСТИ</a></li>
+									<li><a href="" title="">КОНТАКТЫ</a></li>
+								</ul>
+								<div class="more-click">
+									<i class="js-more-click"></i>
+									<div class="more-click__sub">
+										<ul>
+											<li><a href="" title="">Особенности нанесения ПК</a></li>
+											<li><a href="" title="">Мастер-классы, семинары</a></li>
+											<li><a href="" title="">Видео</a></li>
+										</ul>
+									</div>
+								</div>
+								<ul class="lang">
+									<li><a href="" title="">EN</a></li>
+									<li class="active"><a href="" title="">RU</a></li>
+								</ul>
+								<div class="scroll-menu clearfix">
+									<ul class="menu">
+										<li><a href="" title="">КАТАЛОГ</a></li>
+										<li><a href="" title="">FAQ</a></li>
+										<li><a href="" title=""><span>Склад-онлайн</span></a></li>
+									</ul>
+									<ul class="scroll-phone-list">
+										<li class="scroll-phone-list__mail">
+											<span class = "new-mail">
+												<b>amika@mav.by</b>
+												<div>Электронная почтадля РБ</div>
+												<b>amika.export@mav.by</b>
+												<div>Для зарубежных партнёров</div>
+											</span>
+										</li>
+										<li class="scroll-phone-list__phone first">
+											+375 (44) <b>660-10-39</b>      
+											<div>Беларусь</div>
+										</li>
+										<li class="scroll-phone-list__phone">
+											+7 (495) <b>258-88-96</b>
+											<div>Россия</div>
+										</li>
+									</ul>
+								</div>
+							</nav>
+							<div class="clearfix">
+								<form class="header__search search">
+									<input class="search__txt" value="" placeholder="Поиск..." type="search">
+									<input type="submit" class="search__submit" value="">
+								</form>
+								<div class="header__phone phone">
+									<div class="js-header__phone"><i></i><a href = "tel:+375296601039">+375 (29) 660-10-39</a></div>
+									<div class="header__phone-content">
+										<div>
+						<b>Для зарубежных партнеров:</b>
+						<p>
+							<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+							<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+							<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+							skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+							<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a>
+						</p>
+					</div>
+					<div>
+						<b>Для партнеров Республики Беларусь:</b>
+						<p>
+							<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+							<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+						</p>
+					</div>	
+					<div>
+						<b>Юридический и почтовый адрес:</b>
+						<p>ул. Строителей, 6, г. Держинск, <br>Минская обл., Беларусь, 222720 </p>
+					</div>	
+									</div>
+								</div>
+								<a href="" title="" class="re-call boder-dott">Обратный звонок</a>
+								<a href="" title="" class="btn border-solid sklad-online"><i></i>Склад-онлайн</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<div class="main-slider">
+				<div class="js-slider">
+					<div class="item">
+						<div class="main-slider__item" style="background: url(images/slide-bg.jpg) no-repeat top center;">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="left-content">
+											<div class="txt">
+												<p>Международное <b>качество</b><br>порошковых красок <span>Qualicoat*</span><br>уже сегодня у Вас на производстве!</p>
+												<p>* Сертификат QUALICOAT - международный знак качества для порошковых ЛКМ,<br>используемых для окраски металла в архитектурном строительстве.</p>
+											</div>
+											<a href="" title="" class="visible-lg btn detail-btn border-solid">Подробнее</a>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="right-content"><img src="images/pic-slide.png" alt=""></div>
+										<a href="" title="" class="visible-xs btn detail-btn border-solid">Подробнее</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="main-slider__item" style="background: url(images/slide-bg.jpg) no-repeat top center;">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="left-content">
+											<div class="txt">
+												<p>Международное <b>качество</b><br>порошковых красок <span>Qualicoat*</span><br>уже сегодня у Вас на производстве!</p>
+												<p>* Сертификат QUALICOAT - международный знак качества для порошковых ЛКМ,<br>используемых для окраски металла в архитектурном строительстве.</p>
+											</div>
+											<a href="" title="" class="btn detail-btn border-solid">Подробнее</a>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="right-content"><img src="images/pic-slide.png" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="main-slider__item" style="background: url(images/slide-bg.jpg) no-repeat top center;">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="left-content">
+											<div class="txt">
+												<p>Международное <b>качество</b><br>порошковых красок <span>Qualicoat*</span><br>уже сегодня у Вас на производстве!</p>
+												<p>* Сертификат QUALICOAT - международный знак качества для порошковых ЛКМ,<br>используемых для окраски металла в архитектурном строительстве.</p>
+											</div>
+											<a href="" title="" class="btn detail-btn border-solid">Подробнее</a>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="right-content"><img src="images/pic-slide.png" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="main-slider__item" style="background: url(images/slide-bg.jpg) no-repeat top center;">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="left-content">
+											<div class="txt">
+												<p>Международное <b>качество</b><br>порошковых красок <span>Qualicoat*</span><br>уже сегодня у Вас на производстве!</p>
+												<p>* Сертификат QUALICOAT - международный знак качества для порошковых ЛКМ,<br>используемых для окраски металла в архитектурном строительстве.</p>
+											</div>
+											<a href="" title="" class="btn detail-btn border-solid">Подробнее</a>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="right-content"><img src="images/pic-slide.png" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="main-slider__item" style="background: url(images/slide-bg.jpg) no-repeat top center;">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="left-content">
+											<div class="txt">
+												<p>Международное <b>качество</b><br>порошковых красок <span>Qualicoat*</span><br>уже сегодня у Вас на производстве!</p>
+												<p>* Сертификат QUALICOAT - международный знак качества для порошковых ЛКМ,<br>используемых для окраски металла в архитектурном строительстве.</p>
+											</div>
+											<a href="" title="" class="btn detail-btn border-solid">Подробнее</a>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="right-content"><img src="images/pic-slide.png" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="main-slider__item" style="background: url(images/slide-bg.jpg) no-repeat top center;">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="left-content">
+											<div class="txt">
+												<p>Международное <b>качество</b><br>порошковых красок <span>Qualicoat*</span><br>уже сегодня у Вас на производстве!</p>
+												<p>* Сертификат QUALICOAT - международный знак качества для порошковых ЛКМ,<br>используемых для окраски металла в архитектурном строительстве.</p>
+											</div>
+											<a href="" title="" class="btn detail-btn border-solid">Подробнее</a>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="right-content"><img src="images/pic-slide.png" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="main-slider__item" style="background: url(images/slide-bg.jpg) no-repeat top center;">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="left-content">
+											<div class="txt">
+												<p>Международное <b>качество</b><br>порошковых красок <span>Qualicoat*</span><br>уже сегодня у Вас на производстве!</p>
+												<p>* Сертификат QUALICOAT - международный знак качества для порошковых ЛКМ,<br>используемых для окраски металла в архитектурном строительстве.</p>
+											</div>
+											<a href="" title="" class="btn detail-btn border-solid">Подробнее</a>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="right-content"><img src="images/pic-slide.png" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="products-teaser">
+			<a href="" title="" class="sclad-mobile"><div><span>Перейти в Склад-онлайн</span></div></a>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-sm-12">
+						<div class="products-teaser__bg">
+							<div class="products-teaser__title">НАША ПРОДУКЦИЯ</div>
+							<a href="" class="btn go-cat border-solid">Перейти в каталог</a>
+						</div>
+					</div>
+					<div class="col-right">
+						<div class="area-prim">
+							<div class="title-wr clearfix">
+								<div class="area-prim__title"><span>ПОРОШКОВЫЕ краски АМIКА <br class="visible-xs">ИСПОЛЬЗУЮТСЯ В:</span></div>
+							</div>
+							<ul class="align-left">
+								<li class="item1"><i></i><div><span>Архитектуре <br>и строительстве</span></div></li>								
+								<li class="item3"><i></i><div><span>Машиностроении <br>и станкостроении</span></div></li>								
+								<li class="item5"><i></i><div><span>Бытовой технике</span></div></li>								
+							</ul>
+							<ul class="align-right">								
+								<li class="item2"><i></i><div><span>Промышленности <br>и приборостроении</span></div></li>								
+								<li class="item4"><i></i><div><span>Электрооборудовании</span></div></li>							
+								<li class="item6"><i></i><div><span>Производстве <br>металлоизделий <br>и металлоконструкций</span></div></li>
+							</ul>
+						</div>
+						<div class="know-price">
+							Получить образец на пробу
+							<a href="" class="btn know-price__link" title="">Узнать стоимость</a>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="standarts">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="standarts__wr">
+							<div class="title">AMIKA сервис <span>пакетные предложения</span></div>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<ul class="standarts__list">
+							<li id="tarif1">	
+								<div class="item-bg">
+									<a href="" title="" class="standarts__list-item">
+										<div class="title"><div>Standart</div>amika service</div>
+										<div class="st-footer">
+											<img src="images/i/stand-logo.png" alt="">
+											<div class="tarif">Standart</div>
+										</div>
+									</a>
+								</div>
+							</li>	
+							<li id="tarif2">
+								<div class="item-bg">
+									<a href="" title="" class="standarts__list-item">
+										<div class="title"><div>Standart+</div>amika service</div>
+										<div class="st-footer">
+											<img src="images/i/stand-logo.png" alt="">
+											<div class="tarif">Standart</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li id="tarif3">
+								<div class="item-bg">
+									<a href="" title="" class="standarts__list-item">
+										<div class="title"><div>Optimal</div>amika service</div>
+										<div class="st-footer">
+											<img src="images/i/stand-logo.png" alt="">
+											<div class="tarif">Optimal</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li id="tarif4">
+								<div class="item-bg">
+									<a href="" title="" class="standarts__list-item">
+										<div class="title"><div>Premium</div>amika service</div>
+										<div class="st-footer">
+											<img src="images/i/stand-logo.png" alt="">
+											<div class="tarif">Premium</div>
+										</div>
+									</a>
+								</div>
+							</li>
+							<li id="tarif5">
+								<div class="item-bg">
+									<a href="" title="" class="standarts__list-item">
+										<div class="title"><div>VIP</div>amika service</div>
+										<div class="st-footer">
+											<img src="images/i/stand-logo.png" alt="">
+											<div class="tarif">VIP</div>
+										</div>
+									</a>
+								</div>
+							</li>				
+						</ul>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="news">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="block-title">Новости компании</div>
+						<div class="js-news">
+							<article class="item news__item">
+								<div class="news__item-date">18 марта 2017</div>
+								<div class="news__item-title"><a href="" title="">Лакокрасочные материалы MAV в крупнейшем строительном гипермаркете страны!</a></div>
+							</article>
+							<article class="item news__item">
+								<div class="news__item-date">18 марта 2017</div>
+								<div class="news__item-title"><a href="" title="">Лакокрасочные материалы MAV в крупнейшем строительном гипермаркете страны!</a></div>
+							</article>
+							<article class="item news__item">
+								<div class="news__item-date">18 марта 2017</div>
+								<div class="news__item-title"><a href="" title="">Лакокрасочные материалы MAV в крупнейшем строительном гипермаркете страны!</a></div>
+							</article>
+						</div>
+						<a href="" class="all-news border-bottom-solid" title="">Все новости</a>
+					</div>
+					<div class="col-lg-4 insta-ind">
+						<div class="block-title">Мы в Instagram</div>
+						<div class="insta-vijet">
+							<div class="row">
+								<div class="col-lg-4 col-xs-4"><a href="" title=""><img src="images/insta.jpg" alt=""></a></div>
+								<div class="col-lg-4 col-xs-4"><a href="" title=""><img src="images/insta2.jpg" alt=""></a></div>
+								<div class="col-lg-4 col-xs-4"><a href="" title=""><img src="images/insta3.jpg" alt=""></a></div>
+								<div class="col-lg-4 col-xs-4"><a href="" title=""><img src="images/insta4.jpg" alt=""></a></div>
+								<div class="col-lg-4 col-xs-4"><a href="" title=""><img src="images/insta5.jpg" alt=""></a></div>
+								<div class="col-lg-4 col-xs-4"><a href="" title=""><img src="images/insta6.jpg" alt=""></a></div>
+							</div>
+						</div>
+						<a href="" class="insta-link border-bottom-solid" title="">@amika.powdercoatings</a>
+					</div>
+					<div class="col-lg-4">
+						<div class="otgruzka-wr">
+							<div class="otgruzka-title">Отгрузка заказа <br>через 24 часа!</div>
+							<a href="" title="" class="btn">Хочу за 24 часа</a>
+							<a href="" title="" class="btn">Узнать как</a>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<div class="sale">
+			<div class="container">
+				<div class="sale__content">
+					<i></i>
+					<div class="slogan">
+						<div class="title">Такого ещё не было! Скидка за «оперативность»!</div>
+						<div class="p">Получи счет в течение <b>30 мин</b> — или мы платим Вам <b>5%</b> от суммы заказа!</div>
+						<a href="" title="" class="btn add-sale">ПОЛУЧИТЬ <br class = "visible-xs">УНИКАЛЬНОЕ ПРЕДЛОЖЕНИЕ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="faq">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="block-title">FAQ</div>
+						<!-- табы вакансий -->
+						<div class="js-accordion faq-accordion">
+							<h3>Как правильно наносить порошковую краску</h3>
+							<div>
+								Окраска порошковой краской - это процесс нанесения на металл пластмассового покрытия, 
+это покрытие имеет вид порошка и при нагревании переходит в жидкое состояние и связывается 
+с поверхностью металла. Порошковая покраска имеет много преимуществ по сравнению
+с традиционными покрытиями: она экологически более чистая, можно нанести толстый слой 
+без подтеков, выглядит современно. Хотя некоторые аспекты нанесения порошкового покрытия 
+могут быть сложны, но это не остановит предприимчивую душу. Правильная очистка поверхности
+перед окраской и используемые инструменты - вот разница между любителем и профессионалом. <br>
+<a href="" title="" class="border-bottom-solid js-more">Читать далее...</a>
+							</div>
+							<h3>Как правильно выбрать порошковую краску</h3>
+							<div>
+								Окраска порошковой краской - это процесс нанесения на металл пластмассового покрытия, 
+это покрытие имеет вид порошка и при нагревании переходит в жидкое состояние и связывается 
+с поверхностью металла. Порошковая покраска имеет много преимуществ по сравнению
+с традиционными покрытиями: она экологически более чистая, можно нанести толстый слой 
+без подтеков, выглядит современно. Хотя некоторые аспекты нанесения порошкового покрытия 
+могут быть сложны, но это не остановит предприимчивую душу. Правильная очистка поверхности
+перед окраской и используемые инструменты - вот разница между любителем и профессионалом. <br>
+<a href="" title="" class="border-bottom-solid js-more">Читать далее...</a>
+							</div>
+							<h3>Технология порошковой покраски</h3>
+							<div>
+								Окраска порошковой краской - это процесс нанесения на металл пластмассового покрытия, 
+это покрытие имеет вид порошка и при нагревании переходит в жидкое состояние и связывается 
+с поверхностью металла. Порошковая покраска имеет много преимуществ по сравнению
+с традиционными покрытиями: она экологически более чистая, можно нанести толстый слой 
+без подтеков, выглядит современно. Хотя некоторые аспекты нанесения порошкового покрытия 
+могут быть сложны, но это не остановит предприимчивую душу. Правильная очистка поверхности
+перед окраской и используемые инструменты - вот разница между любителем и профессионалом. <br>
+<a href="" title="" class="border-bottom-solid js-more">Читать далее...</a>
+							</div>
+						</div>
+						<!-- // табы вакансий -->
+					</div>
+					<div class="col-lg-5">
+						<div class="faq__right">
+							<img src="images/faq-book.jpg" alt="">
+							<div class="faq__right-content">
+								<div class="title">Скачайте каталог продукции и узнайте, как <br>
+<b>получить техническую поддержку БЕСПЛАТНО!</b></div>
+								<a href="" class ="btn download" title="">Скачать каталог</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="divilery">
+			<div class="container">
+				<div class="divilery__content">
+					<i></i>
+					<div class="slogan">
+						<div class="title">Оплатите 20 тонн порошковой краски и мы доставим заказ <b>БЕСПЛАТНО!</b></div>
+						<a href="" title="" class="btn add-divilery">хочу бесплатную доставку</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="main-map">
+			<div id="map" class="index-map"></div>
+		</div>
+		
+		
+    </div>
+		</div>
+			
+		<footer class="footer">
+			<div class="footer__white">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="footer__copyright">
+								<img src="images/i/footer-logo.png" alt="">
+								<span class="only-desctop">
+									<p class="copyright">© AMIKA™, 2017 <br>Все права защищены</p>
+									<a href="" title="" class="go-map border-bottom-solid">Карта сайта</a>
+									<p class="dev">Сайт разработан <br>компанией <a href="" title="" class="border-bottom-solid">«WebCompany»</a></p>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="footer__contacnts">
+								<img src="images/i/logo-mav.png" alt="">
+								<p>ЧУП "МАВ"</p>
+								<div class="addres">ул. Строителей, 6, г. Держинск, Минская обл., Беларусь, 222720</div>
+								<ul class="phones">
+									<li>
+										<b>Для зарубежных партнеров:</b>
+										<p>
+											<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+											<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+											<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+										skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+										<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a></p>
+									</li>
+									<li>
+										<b>Для партнеров Республики Беларусь:</b>
+										<p>
+											<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+											<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="footer__actions">
+								<div class="a-wr"><a href="" title="" class="btn btn-large">Банковские реквизиты</a></div>
+								<div class="a-wr"><a href="" title="" class="btn btn-large">Карта проезда</a></div>
+							</div>
+						</div>
+						
+						<div class="mobile-copyright">
+							<div class="footer__copyright">
+								<p class="copyright">© AMIKA™, 2017 <br>Все права защищены</p>
+								<a href="" title="" class="go-map border-bottom-solid">Карта сайта</a>
+								<p class="dev">Сайт разработан <br>компанией <a href="" title="" class="border-bottom-solid">«WebCompany»</a></p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="footer__gray">
+				<nav class="container">
+					<ul class="menu">
+						<li><a href="#" title="">КАТАЛОГ</a></li>
+						<li><a href="#" title="">ПРОИЗВОДСТВО</a></li>
+						<li><a href="#" title="">Лаборатория</a></li>
+						<li><a href="#" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+						<li><a href="#" title="">Мастер-классы, семинары</a></li>
+						<li><a href="#" title="">НОВОСТИ</a></li>
+						<li><a href="#" title="">FAQ</a></li>						
+						<li><a href="#" title="">КОНТАКТЫ</a></li>
+					</ul>
+					<div class="footer-more-click"> 
+						<i class="js-footer-more-click"></i>
+						<div class="footer-more-click__sub">
+							<ul>
+								<li><a href="" title="">Особенности нанесения ПК</a></li>
+								<li><a href="" title="">Мастер-классы, семинары</a></li>
+								<li><a href="" title="">Видео</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</footer>
+		
+		<!-- окно по тамеру -->
+		<div id="fb-form-rosa" class="g-modal-win" style="display: none;">
+			<div class="g-modal-win__content">
+				<div class="g-modal-win__content-title"><span>185</span> компании <b>уже знают</b> свою точку росы на участке порошковой окраски. <br><span>Будь подготовлен</span> - закажи проведение измерений <b>абсолютно бесплатно.</b></div>	
+				<form class="g-mail-form">
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field" data-validation="text" placeholder=""  required type="text">
+							<span class="custom-placeholder">Имя...</span>
+						</label>
+					</div>
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field tel" data-validation="custom" data-validation-regexp="[0-9\-\(\)\s]+"  placeholder=""  required type="text">
+							<span class="custom-placeholder">Телефон...</span>
+						</label>
+					</div>
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field" data-validation="email" placeholder=""  required type="email">
+							<span class="custom-placeholder">E-mail...</span>
+						</label>
+					</div>
+					<input class="submit btn" name="" value="Отправить запрос" type="submit">
+				</form>				
+			</div>
+		</div>
+		<!-- -->
+		
+		<div class="social-fixed">
+			<div class="social-fixed__title">Будем <br>дружить!</div>
+			<a href="" title="" class="vk"><i></i></a>
+			<a href="" title="" class="fb"><i></i></a>
+			<a href="" title="" class="in"><i></i></a>
+		</div>
+		
+		<div class="social-fixed-trigger">
+			<div class="social-fixed-trigger__title">Будем дружить!</div>			
+		</div>
+		
+		</div>
+		
+		<!-- JS include -->
+		<script src = "libs/jquery/jquery-1.11.1.min.js"></script>
+		<script src="libs/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+		<script src="libs/jquery-ui-1.11.4.custom/jquery.ui.datepicker-ru.js"></script>
+		<script src = "libs/owl-carousel/owl.carousel.min.js"></script>
+		<script src = "libs/fancybox/jquery.fancybox.pack.js"></script>	
+		<script src = "libs/jquery-form-validator/jquery.form-validator.js"></script>
+		<script src="libs/responsive-table/jquery.rtResponsiveTables.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>		
+		<script src = "js/common.js"></script>
+		<!-- // JS include -->
+		<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+		<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+	</body>
+</html>

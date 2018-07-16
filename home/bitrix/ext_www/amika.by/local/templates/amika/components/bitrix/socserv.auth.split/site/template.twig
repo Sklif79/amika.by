@@ -1,0 +1,7 @@
+<div class="add-socials">
+	<ul class="login__socil-links social-links">
+		{% for soc in result.ITEMS %}
+		<li><a class="social-link {{ soc.ICON }} {{ soc.ACTIVE }}" href="{{ soc.HREF }}" onclick="{{ soc.ONCLICK }}" title=""></a></li>
+		{% endfor %}
+	</ul>
+</div>

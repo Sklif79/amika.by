@@ -1,0 +1,28 @@
+{% for item in result.ITEMS %}
+    {% if item.TYPE == "TITLE" %}
+        {{ AddBitrixActions(item) }}
+        {% include '/local/templates/amika/components/bitrix/news.list/about/tpl/title.twig' %}
+    {% endif %}
+    {% if item.TYPE == "BG_PIC" %}
+        {{ AddBitrixActions(item) }}
+        {% include '/local/templates/amika/components/bitrix/news.list/about/tpl/bg_pic.twig' %}
+    {% endif %}
+    {% if item.TYPE == "PIC_TEXT" %}
+        {{ AddBitrixActions(item) }}
+        {% include '/local/templates/amika/components/bitrix/news.list/about/tpl/pic_text.twig' %}
+    {% endif %}
+    {% if item.TYPE == "TEXT_BG_BLOCK" %}
+        {{ AddBitrixActions(item) }}
+        {% include '/local/templates/amika/components/bitrix/news.list/about/tpl/text_bg_block.twig' %}
+    {% endif %}
+    {% if item.TYPE == "SECT_IMG_TEXT" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/about/tpl/sect_img_text.twig' %}
+    {% endif %}
+    {% if item.TYPE == "PIC_TEXT_OPEN" %}
+        {{ AddBitrixActions(item) }}
+        {% include '/local/templates/amika/components/bitrix/news.list/about/tpl/pic_text_open.twig' %}
+    {% endif %}
+    {% if item.TYPE == "SECT_IMG_BG_TEXT" %}
+        {% include '/local/templates/amika/components/bitrix/news.list/about/tpl/sect_img_bg_text.twig' %}
+    {% endif %}
+{% endfor %}

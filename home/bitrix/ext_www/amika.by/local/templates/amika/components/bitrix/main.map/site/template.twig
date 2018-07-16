@@ -1,0 +1,18 @@
+<div class="sitemap">
+    {% if result.arMapStruct is not empty %}
+        <ul>
+            {% for item in result.arMapStruct %}
+                {% if item.CHILDREN is not empty %}
+                    <li ><a href="{{ item.FULL_PATH }}">{{ item.NAME }}</a>
+                    <ul>
+                        {% for sub in item.CHILDREN %}
+                            <li><a href="{{ sub.FULL_PATH }}">{{ sub.NAME }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <li><a href="{{ item.FULL_PATH }}">{{ item.NAME }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>

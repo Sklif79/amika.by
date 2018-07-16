@@ -1,0 +1,89 @@
+<section class="single-goods">
+    <div class="single-goods__first-level row">
+        <div class="col-lg-5 col-lg-offset-1">
+            <div class="tovar-picts clearfix">
+                {% if result.SLIDER is not empty %}
+                    <div class="tovar-picts__slider-wr">
+                        <div class="slider-for">
+                            {% for img in result.SLIDER %}
+                                <div><img src="{{ img.BIG }}" alt="{{ result.NAME }}"/></div>
+                            {% endfor %}
+                        </div>
+                        <div class="slider-nav">
+                            {% for img in result.SLIDER %}
+                                <div><img src="{{ img.SMALL }}" alt="{{ result.NAME }}"/></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="single-goods__description">
+                <h2 class="single-goods__title">{{ result.NAME }}</h2>
+                {{ result.PREVIEW_TEXT }}
+                {% if result.ADVANTAGE is not empty %}
+                    <ul class="single-goods__description__list">
+                        {% for advantage in result.ADVANTAGE %}
+                            <li>{{ advantage }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="single-goods__second-level row">
+        <div class="col-lg-6">
+            <ul class="single-goods__second-level__option">
+                {% if result.SCOPE_ICO is not empty %}
+                    <li><span class="label">{{ result.PROPERTIES.SCOPE_ICO.NAME }}:</span>
+                        {% for ico in result.SCOPE_ICO %}
+                            <span class="option-data-pic">
+                                <a href="{{ ico.HREF|default('javascript:void 0') }}" target="_blank">
+                                    <img src="{{ ico.SRC }}" alt="{{ ico.NAME }}"/>
+                                </a>
+                            </span>
+                        {% endfor %}
+                    </li>
+                {% endif %}
+                {% if result.LIST_LEFT_SETTING is not empty %}
+                    {% for data in result.LIST_LEFT_SETTING %}
+                        <li><span class="label">{{ data.NAME }}:</span>{{ data.VALUE }}</li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            {% if result.SETTING is not empty %}
+                <div class="single-goods__characters">
+                    <div class="single-goods__characters__title">{{ result.PROPERTIES.SETTING.NAME }}:</div>
+                    <table class="single-goods__characters__list">
+                        {% for setting in result.SETTING %}
+                            <tr>
+                                <td>{{ setting.NAME }}</td>
+                                <td>{{ setting.VALUE }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<!-- -->
+{% if result.DOCUMENTATION is not empty %}
+    <section class="single-goods__download-data">
+        <div class="single-goods__download-data__title">{{ result.PROPERTIES.FILES.NAME }}:</div>
+        <div class="single-goods__download-data__row">
+            {% for data in result.DOCUMENTATION %}
+                <div class="single-goods__download-data__col">
+                    <i class="single-goods__download-data__ico"></i>
+                    <div class="single-goods__download-data__description">
+                        <div class="title">{{ data.NAME }}</div>
+                        <a href="{{ data.HREF }}" download="download" class=""> Скачать {{ data.FILE_SIZE }}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

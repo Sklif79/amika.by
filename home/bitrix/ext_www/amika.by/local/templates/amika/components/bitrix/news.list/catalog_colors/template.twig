@@ -1,0 +1,20 @@
+{% if result.ITEMS %}
+<section class="then-colored-single good-single-colored">
+	<div class="then-colored-single__title">Порошковая краска используется в:</div>
+    <div class="then-colored__card__row clearfix">
+        {% for item in result.ITEMS %}
+        <div class="item then-colored__card__col then-colored__card__col--w25">
+            <div class="then-colored__item">
+                <img src="{{ item.IMG }}" alt="{{ item.NAME }}">
+                <div class="then-colored__item__overlay">
+                    <a href="{{ item.ORG }}" title="{{ item.NAME }}" class="zoom then-colored__item__zoom"><span>Увеличить</span></a>
+                    <a href="{{ item.DETAIL_PAGE_URL }}" title="{{ item.NAME }}"
+                       class="then-colored__item__overlay__link"><span>{{ item.NAME }}</span></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+	<a href="/colors/" class="btn good-single-colored__more">показать больше применений</a>
+</section>
+{%  endif %}

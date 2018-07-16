@@ -1,0 +1,17 @@
+{% if result.ITEMS is not empty %}
+    {% for item in result.ITEMS %}
+        <tr>
+            <td class="tit">
+                {{ item.NAME }}
+            </td>
+            <td>{{ item.PROP.COUNT }}</td>
+        </tr>
+    {% endfor %}
+{% else %}
+    <tr>
+        <td class="tit">
+           Записей не найденно
+        </td>
+        <td></td>
+    </tr>
+{% endif %}

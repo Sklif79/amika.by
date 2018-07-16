@@ -1,0 +1,9 @@
+<section class="catalogue-list catalogue-list--sale clearfix">
+    {% for item in result.ITEMS %}
+        {{ AddBitrixActions(item) }}
+        <a href="{{ item.DETAIL_PAGE_URL }}" id="{{ GetEditAreaId(item) }}" class="catalogue-list__item">
+            <img class="catalogue-list__item__pic" src="{{ item.PREVIEW_PICTURE.SRC }}" alt="{{ item.NAME }}">
+            <h2 class="catalogue-list__item__title">{{ item.NAME }}</h2>
+        </a>
+    {% endfor %}
+</section>

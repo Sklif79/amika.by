@@ -1,0 +1,137 @@
+.header nav .menu > li > a{
+    font-size: 15px;
+}
+.social-links p{
+    cursor: pointer;
+}
+body .footer__gray nav > ul li {
+    margin-right: 45px;
+}
+
+[contenteditable="true"] .align-right{
+    display: block;
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.more-click__sub {
+    z-index: 10;
+}
+
+.read_more {
+    cursor: pointer;
+}
+
+.sitemap {
+    padding: 42px 0;
+}
+
+.sitemap li {
+    margin-bottom: 10px;
+}
+
+.sitemap a {
+    border-bottom: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.sitemap a:hover {
+    border-color: #333;
+}
+
+.sitemap ul ul, .sitemap ul ol, .sitemap ol ol, .sitemap ol ul {
+    margin-left: 25px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+.sitemap ul ol, .sitemap ol ol {
+    margin-left: 30px;
+}
+
+.sitemap ol {
+    list-style-type: decimal;
+}
+
+.search-form-order__body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form-order__body::before,
+.search-form-order__body::after {
+    display: none;
+}
+
+.search-form-order__body a {
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.order-search {
+    flex: 1 1 250px;
+}
+
+/*.order-search {*/
+    /*margin-bottom: 0;*/
+/*}*/
+
+@media only screen and (max-width: 768px) {
+    .search-form-order__body a {
+        margin-left: 0;
+    }
+
+    .search-form-order__body {
+        flex-direction: column;
+    }
+
+    .order-search {
+        flex: none;
+    }
+
+}
+
+.order-detail-title {
+    font-family: "MyriadPro-Regular", sans-serif;
+    font-size: 14px;
+    color: #595959;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.fb-modal-win .g-modal-win__content{
+    width: auto;
+}
+
+.secret-close-btn {
+    background: url(/local/templates/amika/amika/images/i/ico-close.png) no-repeat center;
+}
+
+/*
+.search-table tbody tr:nth-child(3n) td {
+    font-family: "MyriadPro-Regular","sans-serif";
+    color: #333333;
+}
+
+.search-table tbody tr:nth-child(3n) td a {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #333333; }
+
+.search-table tbody tr:nth-child(3n) td a:hover {
+    border-color: white; }
+
+
+.order-table tbody tr:nth-child(odd) td {
+    background: #f0f0f0!important; }
+
+.order-table tbody tr:nth-child(even) td {
+    background: #f7f7f7!important; }
+.search-table tbody tr.red td {
+    background: #f54040!important;
+}
+.search-table tbody tr.red td a {
+    font-family: "MyriadPro-Bold";
+    color: #fff!important;
+}*/
+

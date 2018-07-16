@@ -1,0 +1,54 @@
+<div class="other-page">
+    <div class="content-body">
+        <div class="content-pass-recovery">
+            <div class="container">
+                <h1 class="page-title">Восстановление пароля</h1>
+                {% if result.AUTH_RESULT %}
+                    <div class="pass-recovery__msgs">
+                        {% if result.AUTH_RESULT_TYPE == 'OK' %}
+                            <div class="pass-recovery__msg msg-ok"><span>{{ result.AUTH_RESULT }}</span></div>
+                        {% else %}
+                            <div class="pass-recovery__msg msg-error"><span>{{ result.AUTH_RESULT }}</span></div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                <form  name="bform" method="post" target="_top"  class="pass-recovery-form"  action="{{ result.AUTH_URL }}">
+                    <input type="hidden" name="AUTH_FORM" value="Y">
+                    <input type="hidden" name="TYPE" value="SEND_PWD">
+                    {% if result.BACKURL|length > 0 %}
+                        <input type="hidden" name="backurl" value="{{ result.BACKURL }}"/>
+                    {% endif %}
+                    {% for key, value in result.POST %}
+                        <input type="hidden" name="{{ key }}" value="{{ value }}"/>
+                    {% endfor %}
+                    <p>Введите адрес электронной почты, который
+                        Вы указали при регистрации. Вам будет выслано
+                        письмо с инструкцией по восстановлению.</p>
+                    <div class="field__wrap">
+                        <label class="field__label custom-placeholder-wrap">
+                            <input type="text" class="field"  type="email" name="USER_LOGIN" maxlength="255" value="{{  result.LAST_LOGIN}}" >
+                            <input type="hidden" name="USER_EMAIL" >
+                            <span class="custom-placeholder">Электронная почта</span>
+                        </label>
+                    </div>
+                    {% if result.USE_CAPTCHA == 'Y' %}
+                        <div class="g-capcha">
+                            <input type="hidden" name="captcha_sid" value="{{ result.CAPTCHA_CODE }}"/>
+                            <div class="bx-captcha">
+                                <img src="/bitrix/tools/captcha.php?captcha_sid={{ result.CAPTCHA_CODE }}" width="180"
+                                     height="40" alt="CAPTCHA"/>
+                                <input type="text" name="captcha_word" maxlength="50" value="" autocomplete="off"/>
+                            </div>
+                        </div>
+                        <div class="g-capcha-desc">Благодаря этому инструменту мы уверены, что вы – человек, а не робот!</div>
+                    {% endif %}
+                    <input class="submit btn" value="Восстановить пароль" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    document.bform.onsubmit = function(){document.bform.USER_EMAIL.value = document.bform.USER_LOGIN.value;};
+    document.bform.USER_LOGIN.focus();
+</script>

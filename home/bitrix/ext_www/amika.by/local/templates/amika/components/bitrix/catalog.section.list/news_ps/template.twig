@@ -1,0 +1,13 @@
+<ul class="news-filter__options">
+    {% for item in result.SECTIONS %}
+        <li>
+            <a
+                    href="{{ item.SECTION_PAGE_URL }}"
+                    class="{{ item.ACTIVE }}"
+                    title="{{ item.NAME }}"
+            >
+                {{ item.NAME }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,7 @@
+* {
+    display: none;
+}
+
+#fb-modal-2 * {
+    display: block;
+}

@@ -1,0 +1,21 @@
+<nav class="container">
+    {% if result.MENU_1 is not empty %}
+        <ul class="menu">
+            {% for item in result.MENU_1 %}
+                <li><a href="{{ item.LINK }}">{{ item.TEXT }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if result.MENU_2 is not empty %}
+    <div class="footer-more-click">
+        <i class="js-footer-more-click"></i>
+        <div class="footer-more-click__sub">
+            <ul>
+                {% for item in result.MENU_2 %}
+                    <li><a href="{{ item.LINK }}">{{ item.TEXT }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+</nav>

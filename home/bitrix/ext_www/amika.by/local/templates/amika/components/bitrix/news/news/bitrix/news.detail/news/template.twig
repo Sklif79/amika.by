@@ -1,0 +1,20 @@
+<ul class="single-news__data">
+    <li class="date">{{ result.DISPLAY_ACTIVE_FROM }}</li>
+    <li class="category">{{ result.SECTION_NAME }}</li>
+</ul>
+<div class="single-news__content  droptabs-data">
+    {{ result.DETAIL_TEXT }}
+</div>
+<div class="social-fixed social-shared-news">
+    <a href="https://vk.com/amika.powdercoatings" target="_blank" title="" class="vk"><i></i></a>
+    <a href="https://www.facebook.com/amika.powdercoatings/" target="_blank" title="" class="fb"><i></i></a>
+    <a href="https://www.instagram.com/amika.powdercoatings/" target="_blank" title="" class="in"><i></i></a>
+</div>
+<div class="single-news-nav">
+    {% if result.TO_LEFT is not empty %}
+    <a href="{{ result.TO_LEFT.URL }}" class="prev"><span>предыдущая статья</span></a>
+    {% endif %}.
+    {% if result.TO_RIGHT is not empty %}
+        <a href="{{ result.TO_RIGHT.URL }}" class="next"><span>следующая статья</span></a>
+    {% endif %}
+</div>

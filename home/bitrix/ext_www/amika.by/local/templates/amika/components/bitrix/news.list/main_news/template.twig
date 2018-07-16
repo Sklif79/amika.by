@@ -1,0 +1,11 @@
+<div class="block-title">{{ langMessages['TITLE_NEWS'] }}</div>
+<div class="js-news">
+    {% for item in result.ITEMS %}
+        {{ AddBitrixActions(item) }}
+        <article class="item news__item" id="{{ GetEditAreaId(item) }}" >
+            <div class="news__item-date">{{ item.DATE }}</div>
+            <div class="news__item-title"><a href="{{ item.DETAIL_PAGE_URL }}" > {{ item.NAME }}</a></div>
+        </article>
+    {% endfor %}
+</div>
+<a href="{{ result.LIST_PAGE_URL }}" class="all-news border-bottom-solid" >{{ langMessages['ALL_NEWS'] }}</a>

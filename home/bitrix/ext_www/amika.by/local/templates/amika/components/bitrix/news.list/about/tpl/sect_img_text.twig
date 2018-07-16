@@ -1,0 +1,30 @@
+{% if result.GROUP[item.SECTION] is not empty %}
+    <div class="container bb-1">
+        <div class="slider-group">
+            <div class="row">
+                {% for group in result.GROUP[item.SECTION] %}
+                    {{ AddBitrixActions(group) }}
+                    <div id="{{ GetEditAreaId(group) }}" class="col-lg-{{ item.COL_LG }}">
+                        <div class="slider-group__item">
+                            {% if group.PHOTO is not empty %}
+                                <div class="slider-group__sl">
+                                    <div class="js__slider-group__sl">
+                                        {% for photo in group.PHOTO %}
+                                            <div class="item">
+                                                <a href="{{ photo.BIG }}" class="zoom title="><img src="{{ photo.SMALL }}" alt=""></a>
+                                            </div>
+                                        {% endfor %}
+                                    </div> 
+                                </div>
+                            {% endif %}
+                            <div class="slider-group__item__title">{{ group.PREVIEW_TEXT }}</div>
+                            <div class="text-descr-small">
+                                {{ group.DETAIL_TEXT }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}

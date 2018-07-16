@@ -1,0 +1,90 @@
+<form action="/ajax/" id="stock-order-form-ajax" class="form-ajax" method="post">
+    <input type="hidden" name="ENTITY" value="ORDER">
+    <input type="hidden" name="ACTION" value="ADD">
+    <input type="hidden" name="ELEMENT_ID" value="{{ result.ID }}">
+    <input type="hidden" name="ORDER_ID" value="{{ result.ORDER_ID }}">
+    <div class="store-modal__header">
+        <div class="title">Ваш заказ от {{ result.DATE }}</div>
+        <a href="javascript:window.print();" class="print-order" title=""><span>Распечатать заказ</span></a>
+        <a href="#fb-help" class="help js-open-modal-kosty" title=""><span>Помощь</span></a>
+        <a href="#" class="order-status status-draft" title="">Черновик</a>
+    </div>
+    <table class="order-table responsive">
+        <thead>
+        <tr>
+            <th>Наименование</th>
+            <th>Заказать (кг)</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in result.ITEMS %}
+            <tr id="order-item-{{ item.ID }}">
+                <td>{{ item.NAME }}</td>
+                <td>
+                    <input name="ITEM[{{ item.ID }}]" class="counter-input"  data-count="{{ item.PROPERTIES.COUNT.VALUE }}" value="{{ item.PROPERTIES.COUNT.VALUE }}" data-validation="number" placeholder="Введите кол-во (кг)" type="text">
+                </td>
+                <td>
+                    <a href="javascript:void 0" onclick="GalactikaOrderItemDelete('{{ item.ID }}')" class="delete-order" title="">
+                        <span>Удалить</span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="total-weight">Общий вес: <b id="total-count-massa">{{ result.TOTAL_COUNT }} кг</b></div>
+    <div class="order-detail">
+        <div class="ship-date clearfix">
+            <span>Планируемая дата отгрузки:</span>
+            <div class="field__wrap">
+                <input class="select-date datepicker" name="DATE" required value="{{ result.PROP.DATE }}" placeholder="дд/мм/гггг" type="text" >
+            </div>
+        </div>
+        <div class="shipment">
+            <ul class="shipment__options">
+                <li>
+                    <label>
+                        <input id="radioVar1" class=""  {% if result.PROP.DELIVERY == 'Самовывоз' %} checked {% endif %} name="DELIVERY" value="Самовывоз" type="radio">
+                        <span>Самовывоз</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input id="radioVar1" class="" {% if result.PROP.DELIVERY == 'Доставка' %} checked {% endif %}  name="DELIVERY" value="Доставка" type="radio">
+                        <span>Доставка</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="bill">
+            <div class="field__wrap">
+                <label class="field__label custom-checkbox">
+                    <input type="checkbox" name="BILL" value="Y"{% if result.PROP.BILL == 'Y' %} checked {% endif %}>
+                    <span class="checkbox__replacer">Выставить счет</span>
+                </label>
+            </div>
+        </div>
+        <div class="field__wrap text-area">
+            <label class="field__label custom-placeholder-wrap">
+										<span class="block">
+											<textarea name="MESSAGE" class="field custom-textarea" placeholder="Примечание ....">{{ result.PROP.DISCRIPTION }}</textarea>
+										</span>
+            </label>
+        </div>
+        <input type="hidden" name="ACTION-FORM" id="INPUT-ACTION-FORM" value="">
+        <div class="active-btns clearfix">
+            <button type="submit" name="STATUS" value="PLACE" class="order-click place-order btn-defoult btn">Оформить
+                заказ
+            </button>
+            <button type="submit" name="STATUS" value="SAVE" class="order-click save-order btn-inverse btn">Сохранить
+                заказ
+            </button>
+            <a href="#" data-id="{{ result.ID }}" class="ajax-repeat-order btn-inverse btn">Добавить в
+                заказ</a>
+            <button type="submit" name="STATUS" value="DELETE" class="order-click place-order btn-defoult btn">Удалить
+                черновик
+            </button>
+        </div>
+    </div>
+</form>

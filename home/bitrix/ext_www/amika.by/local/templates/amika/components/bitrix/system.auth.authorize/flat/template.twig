@@ -1,0 +1,67 @@
+<div class="other-page">
+    <div class="content-body">
+        <div class="content-pass-recovery content-login">
+            <div class="container">
+                <h1 class="page-title">Авторизация</h1>
+                <form name="form_auth" method="post" class="pass-recovery-form login-form" target="_top"
+                      action="{{ result.AUTH_URL }}">
+                    <input type="hidden" name="AUTH_FORM" value="Y">
+                    <input type="hidden" name="TYPE" value="AUTH">
+                    {% if result.BACKURL|length > 0 %}
+                        <input type="hidden" name="backurl" value="{{ result.BACKURL }}"/>
+                    {% endif %}
+                    {% for key, value in result.POST %}
+                        <input type="hidden" name="{{ key }}" value="{{ value }}"/>
+                    {% endfor %}
+                {{ APPLICATION.IncludeComponent('bitrix:socserv.auth.form','flat',result.socserv,result.component,result.socserv_hide) }}
+            </div>
+            {% if result.AUTH_RESULT %}
+                <div class="pass-recovery__msgs">
+                    <div class="pass-recovery__msg msg-error"><span>{{ result.AUTH_RESULT }}</span></div>
+                </div>
+            {% endif %}
+            <div class="field__wrap">
+                <label class="field__label custom-placeholder-wrap">
+                    <input class="field" data-validation="email" name="USER_LOGIN" maxlength="255"
+                           value="{{ result.LAST_LOGIN }}" placeholder="" autocomplete="off" required type="email">
+                    <span class="custom-placeholder">Электронная почта</span>
+                </label>
+            </div>
+            <div class="field__wrap">
+                <label class="field__label custom-placeholder-wrap">
+                    <input type="password" name="USER_PASSWORD" maxlength="255" autocomplete="off"
+                           data-validation="strength" data-validation-strength="2"
+                           class="field" placeholder="" required>
+                    <span class="custom-placeholder">Пароль</span>
+                </label>
+            </div>
+            {% if result.USE_CAPTCHA == 'Y' %}
+                <div class="g-capcha">
+                    <input type="hidden" name="captcha_sid" value="{{ result.CAPTCHA_CODE }}"/>
+                    <div class="bx-captcha">
+                        <img src="/bitrix/tools/captcha.php?captcha_sid={{ result.CAPTCHA_CODE }}" width="180"
+                             height="40" alt="CAPTCHA"/>
+                        <input type="text" name="captcha_word" maxlength="50" value="" autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="g-capcha-desc">Благодаря этому инструменту мы уверены, что вы – человек, а не робот!</div>
+            {% endif %}
+            <div class="field__wrap">
+                <div class="flex_row">
+                    <label class="field__label custom-checkbox">
+                        <input type="checkbox" name="USER_REMEMBER" value="Y" checked>
+                        <span class="checkbox__replacer">Запомнить</span>
+                    </label>
+                    <a href="{{ result.AUTH_FORGOT_PASSWORD_URL }}" class="border-bottom-solid">Забыли пароль?</a>
+                </div>
+            </div>
+            <input class="submit btn" name="Login" value="Войти" type="submit">
+            </form>
+            <div class="already-registered">Еще не зарегистрированы? <a href="{{ result.AUTH_REGISTER_URL }}"
+                                                                        class="border-bottom-solid">Зарегистрируйтесь!</a>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

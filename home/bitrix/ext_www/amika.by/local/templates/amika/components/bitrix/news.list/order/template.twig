@@ -1,0 +1,36 @@
+{% if result.PROP.STATUS.CLASS == 'draft' %}
+    {% include '/local/templates/amika/components/bitrix/news.list/order/draft.twig' %}
+{% else %}
+    <div class="store-modal__header">
+        <div class="title">Ваш заказ от {{ result.DATE }}</div>
+        <div class="order-status status-{{ result.PROP.STATUS.CLASS }}">{{ result.PROP.STATUS.NAME }}</div>
+    </div>
+    <table class="order-table responsive">
+        <thead>
+        <tr>
+            <th>Наименование</th>
+            <th>Заказать (кг)</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in result.ITEMS %}
+            <tr>
+                <td>{{ item.NAME }}</td>
+                <td>{{ item.PROPERTIES.COUNT.VALUE }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="total-weight">Общий вес: <b>{{ result.TOTAL_COUNT }} кг</b></div>
+    <div class="order-detail">
+        <div class="ship-date clearfix">Планируемая дата отгрузки: <b>{{ result.PROP.DATE }}</b></div>
+        <div class="shipment"><b>{{ result.PROP.DELIVERY }}</b></div>
+        <div class="field__wrap text-area">
+            <div class="description">{{ result.PROP.DISCRIPTION }}</div>
+        </div>
+        <div class="active-btns clearfix">
+            <a href="/personal/new-order/" title="" class="new-order btn-defoult btn">Новый заказ</a>
+            <a href="#" data-id="{{ result.ID }}" class="ajax-repeat-order btn-inverse btn">Повторить заказ</a>
+        </div>
+    </div>
+{% endif %}

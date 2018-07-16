@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Заголовок | Амика</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="cmsmagazine" content="aa4cc816c3e233bc68ec4386b3eabcf3" />
+		<link rel="shortcut icon" href="images/i/favicon.ico">
+		<!-- CSS include -->
+		<link rel = "stylesheet" href = "libs/bootstrap/grid-core-3.3.1.css" /> 
+		<link rel = "stylesheet" href = "libs/owl-carousel/assets/owl.carousel.css" />
+		<link rel = "stylesheet" href = "libs/owl-carousel/assets/animate.css" />
+		<link rel = "stylesheet" href = "fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel = "stylesheet" href = "libs/fancybox/jquery.fancybox.css" />	
+		<link rel = "stylesheet" href = "libs/jquery-form-validator/theme-default.css" />
+		<link rel="stylesheet" href="libs/slick-1.8.0/slick/slick.css" />
+		<link rel="stylesheet" href="libs/slick-1.8.0/slick/slick-theme.css" />
+		<link rel = "stylesheet" href = "libs/responsive-table/jquery.rtResponsiveTables.css" />
+		<!-- // CSS include -->
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<!--[if lt IE 9]>
+			<script src="libs/html5shiv/es5-shim.min.js"></script>
+			<script src="libs/html5shiv/html5shiv.min.js"></script>
+			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="libs/respond/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/media.css" />
+		<!-- яндекс карта -->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script type="text/javascript">			
+			ymaps.ready(init);
+			var myMap, 
+				myPlacemark;
+
+			function init(){ 
+				myMap=new ymaps.Map("map", {
+					center: [53.677011,27.097172],
+					zoom: 14,
+					controls: ["zoomControl","geolocationControl"]
+				}); 					
+				var myPlacemark=new ymaps.Placemark([53.677011,27.097172], {}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'images/i/map-mark.png',
+					iconImageSize: [129,34],
+					iconImageOffset:[-17, -64]
+				});				
+				myMap.geoObjects.add(myPlacemark);
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div class="bd-site">
+		
+			<div class = "b-fixed-footer">
+			<div class = "b-footer-padding">
+			
+			<div class="mobile-aside">
+				<div class="mobile-aside__header clearfix">
+					<form class="header__search mobile-aside__search search">
+						<input class="search__txt" value="" placeholder="Поиск..." type="search">
+						<input type="submit" class="search__submit" value="">
+					</form>
+					<div class="back js-back clerafix">Назад</div>
+				</div>
+				<a href="" title="" class="sklad-online"><span>Склад-онлайн</span></a>
+				<ul class="mobile-menu">
+					<li><a href="" title="">КАТАЛОГ</a></li>
+					<li><a href="" title="">ПРОИЗВОДСТВО</a></li>
+					<li><a href="" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+					<li><a href="" title="">FAQ</a></li>
+					<li><a href="" title="">НОВОСТИ</a></li>
+					<li><a href="" title="">КОНТАКТЫ</a></li>
+					<li><a href="" title="">Особенности нанесения ПК</a></li>
+					<li><a href="" title="">Мастер-классы, семинары</a></li>
+					<li><a href="" title="">Видео</a></li>
+				</ul>
+				<div class="header__phone-content mobile__phone-content">
+					<div>
+						<b>Для зарубежных партнеров:</b>
+						<p>
+							<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+							<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+							<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+							skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+							<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a>
+						</p>
+					</div>
+					<div>
+						<b>Для партнеров Республики Беларусь:</b>
+						<p>
+							<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+							<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+						</p>
+					</div>	
+					<div>
+						<b>Юридический и почтовый адрес:</b>
+						<p>ул. Строителей, 6, г. Держинск, <br>Минская обл., Беларусь, 222720 </p>
+					</div>	
+				</div>
+				<a href="" title="" class="re-call boder-dott">Обратный звонок</a>
+				<ul class="lang clerfix">
+					<li><a href="" title="">EN</a></li>
+					<li class="active"><a href="" title="">RU</a></li>
+				</ul>
+			</div>
+		
+		<div class="wr-header">
+		
+			<header class="mobile-header clearfix">
+				<img src="images/i/mobile-logo.png" alt="">
+				<div class="menu-trigger js-menu-trigger"></div>
+				<div class="search-trigger"></div>
+			</header>
+			
+			<header class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+						<a href="/" class="header__logo">
+							<img src="images/i/logo.png" alt="">
+							<div>Порошковые краски</div>
+						</a>
+						</div>
+						<div class="col-lg-9">
+							<nav class="clearfix">
+								<ul class="menu">
+									<li><a href="" title="">КАТАЛОГ</a></li>
+									<li class="has-children"><a href="" title="">ПРОИЗВОДСТВО</a>
+										<ul class="sub-menu">
+											<li><a href="" title="">ПРОИЗВОДСТВО</a></li>
+											<li><a href="" title="">Лаборатория</a></li>
+										</ul>
+									</li>
+									<li><a href="" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+									<li><a href="" title="">FAQ</a></li>
+									<li><a href="" title="">НОВОСТИ</a></li>
+									<li><a href="" title="">КОНТАКТЫ</a></li>
+								</ul>
+								<div class="more-click">
+									<i class="js-more-click"></i>
+									<div class="more-click__sub">
+										<ul>
+											<li><a href="" title="">Особенности нанесения ПК</a></li>
+											<li><a href="" title="">Мастер-классы, семинары</a></li>
+											<li><a href="" title="">Видео</a></li>
+										</ul>
+									</div>
+								</div>
+								<ul class="lang">
+									<li><a href="" title="">EN</a></li>
+									<li class="active"><a href="" title="">RU</a></li>
+								</ul>
+								<div class="scroll-menu clearfix">
+									<ul class="menu">
+										<li><a href="" title="">КАТАЛОГ</a></li>
+										<li><a href="" title="">FAQ</a></li>
+										<li><a href="" title=""><span>Склад-онлайн</span></a></li>
+									</ul>
+									<ul class="scroll-phone-list">
+										<li class="scroll-phone-list__mail">
+											<span class = "new-mail">
+												<b>amika@mav.by</b>
+												<div>Электронная почтадля РБ</div>
+												<b>amika.export@mav.by</b>
+												<div>Для зарубежных партнёров</div>
+											</span>
+										</li>
+										<li class="scroll-phone-list__phone first">
+											+375 (44) <b>660-10-39</b>      
+											<div>Беларусь</div>
+										</li>
+										<li class="scroll-phone-list__phone">
+											+7 (495) <b>258-88-96</b>
+											<div>Россия</div>
+										</li>
+									</ul>
+								</div>
+							</nav>
+							<div class="clearfix">
+								<form class="header__search search">
+									<input class="search__txt" value="" placeholder="Поиск..." type="search">
+									<input type="submit" class="search__submit" value="">
+								</form>
+								<div class="header__phone phone">
+									<div class="js-header__phone"><i></i><a href = "tel:+375296601039">+375 (29) 660-10-39</a></div>
+									<div class="header__phone-content">
+										<div>
+						<b>Для зарубежных партнеров:</b>
+						<p>
+							<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+							<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+							<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+							skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+							<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a>
+						</p>
+					</div>
+					<div>
+						<b>Для партнеров Республики Беларусь:</b>
+						<p>
+							<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+							<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+						</p>
+					</div>	
+					<div>
+						<b>Юридический и почтовый адрес:</b>
+						<p>ул. Строителей, 6, г. Держинск, <br>Минская обл., Беларусь, 222720 </p>
+					</div>	
+									</div>
+								</div>
+								<a href="" title="" class="re-call boder-dott">Обратный звонок</a>
+								<a href="" title="" class="btn border-solid sklad-online"><i></i>Склад-онлайн</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		
+		</div>
+		
+		<div class = "other-page search-page">
+			<div class = "content-header">
+				<div class = "container">				
+					<div class = "other-content-header__data">	
+						<div class = "left">
+							<ul class="breadcrums clearfix">
+								<li><a href="#" title="">Главная</a></li>
+								<li class="active"><a href="#" title="">Лаборатория</a></li>
+							</ul>	
+							<h1 class = "page-title">Лаборатория</h1>
+						</div>						
+					</div>			
+				</div>
+			</div>
+			<div class = "content-body">
+				<div class="container">
+					<!-- контент страницы -->
+					<section class = "laboratories__preview">
+						<div class = "laboratories__preview__video">
+							<img src="images/video-prev.png" alt="">
+							<div class = "laboratories__preview__video__overlay">
+								<a href = "" class = "video__overlay-play"></a>
+							</div>
+						</div>
+					
+						<div class = "laboratories__preview__text">
+							<img class = "hidden-xs align-right" src="images/pic-lab-prv.png" alt="">
+							<p>Сотрудники лаборатории порошковых красок AMIKA самые молодые среди производителей порошковой краски. Мы гордимся каждым из нас! Привлекаем всё большее внимание со стороны Потребителей. Любим здоровую конкуренцию и всегда готовы бросать себе вызов.</p>
+							<p>Все физико-механические тесты, проводимые в лаборатории порошковых красок AMIKA, моделируют условия, которым окрашенное изделие может подвергаться у Вас на производстве: деформация, монтаж, транспортирование, длительная эксплуатация под действием статических, динамических нагрузок и т.д.</p>
+							<p>С нами удобно работать: Вы сообщаете необходимые условия эксплуатации порошкового покрытия, мы подбираем материал с нужным набором характеристик.</p>
+							<p><b>Ниже приведен список технических характеристик порошковой краски:</b></p>
+						</div>
+					</section>
+					<!-- // -->
+					<section class = "laboratories__droptabs">
+					
+						<div class = "laboratories__droptabs__card">
+							<div class = "laboratories__droptabs__header">
+								<div class = "laboratories__droptabs__header-item">
+									<img src="images/pic-drops-1.png" alt="">
+									<div class = "title">Свойства</div>
+								</div>
+							</div>
+							<div class = "laboratories__droptabs__content">
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Внешний вид краски</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Цвет покрытия</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Потеря массы при горячей сушке, ГОСТ ИСО 8130-7</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Цвет покрытия</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Гранулометрический состав</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+							</div>
+						</div>
+						
+						<div class = "laboratories__droptabs__card">
+							<div class = "laboratories__droptabs__header">
+								<div class = "laboratories__droptabs__header-item">
+									<img src="images/pic-drops-2.png" alt="">
+									<div class = "title">Свойства покрытия</div>
+								</div>
+							</div>
+							<div class = "laboratories__droptabs__content">
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Внешний вид покрытия</div>
+									<div class = "droptabs__content-item__body droptabs-data">
+										<!-- контент таба -->
+										<img class = "align-right" src="images/pic-lab-content.png" alt="">
+										<p>Чтобы не получить неожиданный результат, не рискуйте, покупая магазинные стандартные красители, рассчитанные «на всех». Лучше проконсультируйтесь со специалистом, который поможет подобрать краску с учётом индивидуальной структуры ваших волос.</p>
+										<h2>Интересная информация</h2>
+										<div class = "interest-inform">
+											<div class = "interest-inform__content">Чтобы не получить неожиданный результат, не рискуйте, покупая магазинные стандартные красители, рассчитанные «на всех». Лучше проконсультируйтесь со специалистом, который поможет подобрать краску с учётом индивидуальной структуры ваших волос.</div>
+										</div>
+										<p>Поэтому блондинка такой краской волосы может даже пережечь. Но и брюнетка вряд ли получит тот оттенок, что изображён на упаковке.</p>
+										<p>Что касается окрашивания волос с сединой, то надо помнить, что следует использовать только половину краски от общей массы (именно с натуральным пигментом). К примеру, красимся в шоколадный цвет с золотистым или рыжим отливом. Значит, часть краски берём с отливом, а часть шоколадного цвета, но с натуральным пигментом. Потому что искусственный пигмент седину только протонирует, и в итоге у вас получится просто яркий цвет. Ещё возможный результат: по длине цвет будет тёмно-шоколадным, а корни окажутся светло-рыжими. На волосы с сединой надо наносить исключительно процентный оксид. Дело в том, что, окрашивая седину, нам</p>
+										<div class = "hr"></div>
+										<div class = "row">
+											<div class = "col-lg-6">
+												<div class = "js--droptabs-data__slider droptabs-data__slider">
+													<div class = "item">
+														<img src="images/drop-slide.png" alt="">
+													</div>
+													<div class = "item">
+														<img src="images/drop-slide.png" alt="">
+													</div>
+													<div class = "item">
+														<img src="images/drop-slide.png" alt="">
+													</div>
+													<div class = "item">
+														<img src="images/drop-slide.png" alt="">
+													</div>
+												</div>
+											</div>
+											<div class = "col-lg-6 padding-col-0">
+												<p>Чтобы не получить неожиданный результат, не рискуйте, покупая магазинные стандартные красители, рассчитанные «на всех». Лучше проконсультируйтесь со специалистом, который поможет подобрать краску с учётом индивидуальной структуры ваших волос.</p>
+												<p>Во-первых, является ошибкой окрашивать волосы самостоятельно. Ведь профессиональный мастер диагностирует состояние кожи вашей головы, смотрит на структуру и натуральный цвет волос. Исходя из этого, подбирает нужный процент оксида и краску. Цвет, который вы видите на палитре, не всегда будет таким же на ваших волосах. Дело в том, что бытовая краска из магазина изначально рассчитана на самую сложную работу. К примеру, две девушки решили осветлить волосы. Но одна и та же краска для брюнетки будет не настолько агрессивна, как для девушки со светлыми волосами. В краску добавлен большой процент перекиси, рассчитанный на тёмные волосы, что- бы максимально раскрыть их структуру. Поэтому блондинка такой краской волосы может даже пережечь. Но и брюнетка вряд ли получит тот оттенок, что изображён на упаковке.</p>
+											</div>
+										</div>
+										<div class = "hr"></div>
+										<div class = "row list-ex-wr">
+											<div class = "col-lg-6">
+												<div class = "list-title">Пример оформления списка:</div>
+												<ul class = "list-ex-1">
+													<li>Стабильность при хранении;</li>
+													<li>Текучесть на наклонной плоскости;</li>
+													<li>Различное моделирование тех или иных условий при разработке;</li>
+													<li>Нанесение методом трибо и корона;</li>
+												</ul>
+											</div>
+											<div class = "col-lg-6 padding-col-0">
+												<div class = "list-title">Пример оформления списка номер два:</div>
+												<ul class = "list-ex-2">
+													<li>Стабильность при хранении;</li>
+													<li>Текучесть на наклонной плоскости;</li>
+													<li>Различное моделирование тех или иных условий при разработке;</li>
+													<li>Нанесение методом трибо и корона;</li>
+												</ul>
+											</div>
+										</div>
+										<div class = "hr"></div>
+										<div class = "stages-prod">
+											<div class = "stages-prod__title">Этапы производства:</div>
+											<div class = "stages-prod__flex">
+											
+												<div class = "stages-prod__item">
+													<div class = "stages-prod__item__header">
+														<i>1</i>
+														<div class = "title">Заявка на разработку</div>
+													</div>
+													<div class = "stages-prod__item__content">Потребитель оставляет запрос на разработку образца с указанием информации и передаёт менеджеру образец запрашиваемого цвета.</div>
+												</div>
+												
+												<div class = "stages-prod__item">
+													<div class = "stages-prod__item__header">
+														<i>2</i>
+														<div class = "title">Изготовление</div>
+													</div>
+													<div class = "stages-prod__item__content">Лаборатория изготавливает краску необходимого цвета, и образец-эталон пластину с покрытием.</div>
+												</div>
+												
+												<div class = "stages-prod__item">
+													<div class = "stages-prod__item__header">
+														<i>3</i>
+														<div class = "title">Согласование</div>
+													</div>
+													<div class = "stages-prod__item__content">Демонстрируем результат нашей изготовление опытной партии. По запро Клиента выезжаем для технического сопровождения и внедрения на производстве опытной партии</div>
+												</div>
+												
+											</div>											
+										</div>
+										<div class = "important-know">
+											<div class = "important-know__title">Важно знать!</div>
+											<div class = "important-know__content">Чтобы не получить неожиданный результат, не рискуйте, покупая магазинные стандартные красители, рассчитанные «на всех». Лучше проконсультируйтесь со специалистом, который поможет подобрать краску с учётом индивидуальной структуры ваших волос. Чтобы не получить неожиданный результат, не рискуйте, покупая магазинные стандартные красители, рассчитанные «на всех». Лучше проконсультируйтесь со специалистом, который поможет подобрать краску с учётом индивидуальной структуры ваших волос.</div>
+										</div>
+										<!-- // контент таба -->
+									</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Прочность покрытия при ударе</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Эластичность покрытия при изгибе</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Прочность покрытия при растяжении</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+								<div class = "laboratories__droptabs__content-item">
+									<div class = "droptabs__content-item__header">Адгезия покрытия</div>
+									<div class = "droptabs__content-item__body droptabs-data">Контент</div>
+								</div>
+								<!-- -->
+							</div>
+						</div>
+						
+						
+					</section>
+					<!-- // -->
+					<section class = "lab-description">
+						<p><b>Арбитражные пробы на каждую партию стандартных продуктов храним 1 год, на специальные продукты - больше года.</b></p>
+						<p>Область аккредитации лаборатории компании MAV - 60+ показателей. Полный список размещен на сайте www.mav.by. Самые интересные испытания: <a href = "" class = "border-bottom-solid">читать далее</a></p>
+					</section>
+					<!-- // -->
+					<section class = "help-choise">
+						<div class = "help-choise__title">Поможем с выбором краски!</div>
+						<div class = "row">
+							<div class = "col-lg-9">
+								<form class = "row">
+									<div class = "col-lg-4">
+										<div class = "help-choise__field">
+											<label class = "help-choise__label">Введите ваше имя:</label>
+											<input class = "help-choise__input">
+										</div>
+									</div>
+									<div class = "col-lg-4">
+										<div class = "help-choise__field">
+											<label class = "help-choise__label">Введите ваш телефон:</label>
+											<input class = "help-choise__input tel" data-validation="custom" data-validation-regexp="[0-9\-\(\)\s]+">
+										</div>
+									</div>
+									<div class = "col-lg-4">
+										<div class = "help-choise__field">
+											<label class = "help-choise__label">Введите ваш email:</label>
+											<input class = "help-choise__input" data-validation="email">
+										</div>
+									</div>
+									<div class = "col-lg-12">
+										<div class = "help-choise__field">
+											<label class = "help-choise__label">Какой вопрос вас интересует:</label>
+											<textarea class = "help-choise__textarea"></textarea>
+										</div>
+									</div>
+									<div class = "col-lg-4">
+										<button type = "submit" class = "btn help-choise__button">Отправить</button>
+									</div>
+								</form>
+							</div>
+							<div class = "col-lg-3 hidden-xs">
+								<div class = "help-choise__banner">
+									<img src = "images/pic-help-choise.png" alt = "">
+									<div class = "help-choise__phone"></div>
+								</div>
+							</div>
+						</div>
+					</section>					
+					<!-- // контент страницы -->
+				</div>
+			</div>
+		</div>		
+		
+		
+    </div>
+		</div>
+			
+		<footer class="footer">
+			<div class="footer__white">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="footer__copyright">
+								<img src="images/i/footer-logo.png" alt="">
+								<span class="only-desctop">
+									<p class="copyright">© AMIKA™, 2017 <br>Все права защищены</p>
+									<a href="" title="" class="go-map border-bottom-solid">Карта сайта</a>
+									<p class="dev">Сайт разработан <br>компанией <a href="" title="" class="border-bottom-solid">«WebCompany»</a></p>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="footer__contacnts">
+								<img src="images/i/logo-mav.png" alt="">
+								<p>ЧУП "МАВ"</p>
+								<div class="addres">ул. Строителей, 6, г. Держинск, Минская обл., Беларусь, 222720</div>
+								<ul class="phones">
+									<li>
+										<b>Для зарубежных партнеров:</b>
+										<p>
+											<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+											<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+											<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+										skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+										<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a></p>
+									</li>
+									<li>
+										<b>Для партнеров Республики Беларусь:</b>
+										<p>
+											<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+											<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="footer__actions">
+								<div class="a-wr"><a href="" title="" class="btn btn-large">Банковские реквизиты</a></div>
+								<div class="a-wr"><a href="" title="" class="btn btn-large">Карта проезда</a></div>
+							</div>
+						</div>
+						
+						<div class="mobile-copyright">
+							<div class="footer__copyright">
+								<p class="copyright">© AMIKA™, 2017 <br>Все права защищены</p>
+								<a href="" title="" class="go-map border-bottom-solid">Карта сайта</a>
+								<p class="dev">Сайт разработан <br>компанией <a href="" title="" class="border-bottom-solid">«WebCompany»</a></p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="footer__gray">
+				<nav class="container">
+					<ul class="menu">
+						<li><a href="#" title="">КАТАЛОГ</a></li>
+						<li><a href="#" title="">ПРОИЗВОДСТВО</a></li>
+						<li><a href="#" title="">Лаборатория</a></li>
+						<li><a href="#" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+						<li><a href="#" title="">Мастер-классы, семинары</a></li>
+						<li><a href="#" title="">НОВОСТИ</a></li>
+						<li><a href="#" title="">FAQ</a></li>						
+						<li><a href="#" title="">КОНТАКТЫ</a></li>
+					</ul>
+					<div class="footer-more-click"> 
+						<i class="js-footer-more-click"></i>
+						<div class="footer-more-click__sub">
+							<ul>
+								<li><a href="" title="">Особенности нанесения ПК</a></li>
+								<li><a href="" title="">Мастер-классы, семинары</a></li>
+								<li><a href="" title="">Видео</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</footer>
+		
+		<!-- окно по таймеру -->
+		<div id="fb-form-rosa" class="g-modal-win" style="display: none;">
+			<div class="g-modal-win__content">
+				<div class="g-modal-win__content-title"><span>185</span> компании <b>уже знают</b> свою точку росы на участке порошковой окраски. <br><span>Будь подготовлен</span> - закажи проведение измерений <b>абсолютно бесплатно.</b></div>	
+				<form class="g-mail-form">
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field" data-validation="text" placeholder=""  required type="text">
+							<span class="custom-placeholder">Имя...</span>
+						</label>
+					</div>
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field tel" data-validation="custom" data-validation-regexp="[0-9\-\(\)\s]+"  placeholder=""  required type="text">
+							<span class="custom-placeholder">Телефон...</span>
+						</label>
+					</div>
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field" data-validation="email" placeholder=""  required type="email">
+							<span class="custom-placeholder">E-mail...</span>
+						</label>
+					</div>
+					<input class="submit btn" name="" value="Отправить запрос" type="submit">
+				</form>				
+			</div>
+		</div>
+		<!-- -->
+		
+		<div class="social-fixed">
+			<div class="social-fixed__title">Будем <br>дружить!</div>
+			<a href="" title="" class="vk"><i></i></a>
+			<a href="" title="" class="fb"><i></i></a>
+			<a href="" title="" class="in"><i></i></a>
+		</div>
+		
+		<div class="social-fixed-trigger">
+			<div class="social-fixed-trigger__title">Будем дружить!</div>			
+		</div>
+		
+		<div class = "aside-help-choise">
+			<div class = "aside-help-choise__wrap">
+				<div class = "aside-help-choise__header">
+					<div class = "aside-help-choise__trigger"></div>
+					Поможем с выбором краски!
+				</div>
+				<form class = "aside-help-choise__form">
+					<div class = "aside-help-choise__field">
+						<label class = "aside-help-choise__label">Введите ваше имя:</label>
+						<input class = "aside-help-choise__input">
+					</div>
+					<div class = "aside-help-choise__field">
+						<label class = "aside-help-choise__label">Введите ваш телефон:</label>
+						<input class = "aside-help-choise__input tel" data-validation="custom" data-validation-regexp="[0-9\-\(\)\s]+">
+					</div>
+					<div class = "aside-help-choise__field">
+						<label class = "aside-help-choise__label">Какой вопрос вас интересует:</label>
+						<textarea class = "aside-help-choise__textarea"></textarea>
+					</div>
+					<button type = "submit" class = "btn aside-help-choise__button">Отправить</button>
+				</form>
+			</div>
+		</div>
+		
+		</div>
+		
+		<!-- JS include -->
+		<script src = "libs/jquery/jquery-1.11.1.min.js"></script>
+		<script src="libs/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+		<script src="libs/jquery-ui-1.11.4.custom/jquery.ui.datepicker-ru.js"></script>
+		<script src = "libs/owl-carousel/owl.carousel.min.js"></script>
+		<script src = "libs/fancybox/jquery.fancybox.pack.js"></script>	
+		<script src = "libs/jquery-form-validator/jquery.form-validator.js"></script>
+		<script src="libs/responsive-table/jquery.rtResponsiveTables.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>		
+		<script src="libs/slick-1.8.0/slick/slick.js"></script>
+		<script src="libs/masonry/masonry.pkgd.js"></script>
+		<script src="libs/masonry/imagesloaded.pkgd.js"></script>				
+		<script src = "js/common.js"></script>
+		<!-- // JS include -->
+		<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+		<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+	</body>
+</html>

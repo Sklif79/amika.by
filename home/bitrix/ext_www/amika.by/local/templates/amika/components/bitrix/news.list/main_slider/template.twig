@@ -1,0 +1,36 @@
+<div class="main-slider">
+    <div class="js-slider">
+        {% for item in result.ITEMS %}
+            {{ AddBitrixActions(item) }}
+            <div class="item" id="{{ GetEditAreaId(item) }}">
+                <div class="main-slider__item"
+                     style="background: url({{ item.PREVIEW_PICTURE }}) no-repeat top center;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="left-content">
+                                    <div class="txt">
+                                        {{ item.PREVIEW_TEXT }}
+                                    </div>
+                                    {% if item.PROP.URL %}
+                                        <a href="{{ item.PROP.URL }}"  {% if item.PROP.TARGET %} target="_blank"  {% endif %}
+                                           class="visible-lg btn detail-btn border-solid">{{ item.PROP.LINCK_TEXT }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                {% if item.DETAIL_PICTURE %}
+                                    <div class="right-content"><img src="{{ item.DETAIL_PICTURE }}" alt="{{ item.NAME }}"></div>
+                                {% endif %}
+                                {% if item.PROP.URL %}
+                                    <a href="{{ item.PROP.URL }}" {% if item.PROP.TARGET %} target="_blank"  {% endif %}
+                                       class="visible-xs btn detail-btn border-solid">{{ item.PROP.LINCK_TEXT }}</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

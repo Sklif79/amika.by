@@ -1,0 +1,26 @@
+
+<div class="bottom-related-news">
+    <div class="container">
+        <div class="bottom-related-news__header">
+            <div class="bottom-related-news__title">Читайте также</div>
+            <a href="/news/" class="related-news__see-all">все новости</a>
+        </div>
+        <div class="row">
+            {% for item in result.ITEMS %}
+                {{ AddBitrixActions(item) }}
+                <div class="col-lg-3" id="{{ GetEditAreaId(item) }}">
+                    <div class="bottom-related-news__item">
+                        <img src="{{ item.PREVIEW_PICTURE.SRC }}" alt="{{ item.NAME }}">
+                        <div class="bottom-related-news__item__body">
+                            <h2 class="bottom-related-news__item__title"><a class="none-more" href="{{ item.DETAIL_PAGE_URL }}" title="">{{ item.NAME }}</a></h2>
+                            <div class="bottom-related-news__item__data">
+                                <div class="date">{{ item.DISPLAY_ACTIVE_FROM }}</div>
+                                <div class="category">{{ item.SECTION_EL.NAME }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

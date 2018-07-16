@@ -1,0 +1,22 @@
+<section class="production-area clearfix">
+    <div class="production-area__bg">
+        <div class="production-area__content">
+            {{ result.DESCRIPTION }}
+        </div>
+    </div>
+    <div class="production-area__carousel">
+        <div class="production-carousel">
+            <div class="js-production-carousel">
+                {% for item in group.ITEMS %}
+                    {{ AddBitrixActions(item) }}
+                    <div class="item" id="{{ GetEditAreaId(item) }}">
+                        <a class="fancybox" href="{{ item.PREVIEW_PICTURE.SRC }}">
+                            <img src="{{ item.PREVIEW_PICTURE.SRC_PREV }}" alt="{{ item.PREVIEW_PICTURE.ALT }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <a href="#fb-help-color" class="btn js-open-modal">Записаться на экскурсию на производство</a>
+    </div>
+</section>

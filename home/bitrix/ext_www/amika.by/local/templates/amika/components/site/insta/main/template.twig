@@ -1,0 +1,19 @@
+<div class="block-title">{{ langMessages['TITLE_INSTA'] }}</div>
+<div class="insta-vijet">
+    {% for row in result.ITEMS %}
+        <div class="row">
+            {% for item in row %}
+                <div class="col-lg-4 col-xs-4">
+                    <a
+                            href="{{ item.LINK }}"
+                            target="_blank"
+                    >
+                        <img src="{{ item.SRC }}" alt="">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+<a href="https://www.instagram.com/amika.powdercoatings/" target="_blank" class="insta-link border-bottom-solid"
+   title="">@amika.powdercoatings</a>

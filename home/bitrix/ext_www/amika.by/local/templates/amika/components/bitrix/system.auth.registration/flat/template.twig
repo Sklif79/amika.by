@@ -1,0 +1,83 @@
+<div class="other-page">
+    <div class="content-body">
+        <div class="content-pass-recovery content-registration">
+            <div class="container">
+                <h1 class="page-title">Регистрация</h1>
+                <form method="post" class="pass-recovery-form login-form" action="{{ result.AUTH_URL }}" name="bform">
+                    <input type="hidden" name="AUTH_FORM" value="Y"/>
+                    <input type="hidden" name="TYPE" value="REGISTRATION"/>
+                    <div class="preview-txt form-txt">Зарегистрируйтесь через социальные сети</div>
+                    {% if result.BACKURL|length > 0 %}
+                        <input type="hidden" name="backurl" value="{{ result.BACKURL }}"/>
+                    {% endif %}
+                    {% for key, value in result.POST %}
+                        <input type="hidden" name="{{ key }}" value="{{ value }}"/>
+                    {% endfor %}
+                    {{ APPLICATION.IncludeComponent('bitrix:socserv.auth.form','flat',result.socserv,result.component,result.socserv_hide) }}
+            </div>
+            <div class="under-social-txt form-txt">Или заполните форму регистрации</div>
+            {% if result.AUTH_RESULT %}
+                <div class="pass-recovery__msgs">
+                    <div class="pass-recovery__msg msg-error"><span>{{ result.AUTH_RESULT }}</span></div>
+                </div>
+            {% endif %}
+            {% if result.USE_EMAIL_CONFIRMATION == 'Y' %}
+                <div class="pass-recovery__msgs">
+                    <div class="pass-recovery__msg msg-error">
+                        <span>{{ langMessages['AUTH_EMAIL_WILL_BE_SENT'] }}</span>
+                    </div>
+                </div>
+            {% endif %}
+            <div class="field__wrap">
+                <label class="field__label custom-placeholder-wrap">
+                    <input class="field" data-validation="email" name="USER_LOGIN" placeholder=""
+                           value="{{ result.USER_LOGIN }}" required type="email">
+                    <span class="custom-placeholder">Электронная почта</span>
+                </label>
+            </div>
+            <input type="hidden" name="USER_NAME" value="{{ result.USER_LOGIN }}">
+            <input type="hidden" name="USER_EMAIL" value="{{ result.USER_LOGIN }}">
+            <div class="field__wrap">
+                <label class="field__label custom-placeholder-wrap">
+                    <input class="field" type="password" data-validation-length="min8"
+                           value="{{ result.USER_PASSWORD }}" name="USER_PASSWORD"
+                           data-validation="length">
+                    <span class="custom-placeholder">Пароль</span>
+                </label>
+            </div>
+            <div class="field__wrap">
+                <label class="field__label custom-placeholder-wrap">
+                    <input class="field" type="password" value="{{ result.USER_CONFIRM_PASSWORD }}"
+                           name="USER_CONFIRM_PASSWORD" data-validation="confirmation">
+                    <span class="custom-placeholder">Повторите пароль</span>
+                </label>
+            </div>
+            {% if result.USE_CAPTCHA == 'Y' %}
+                <div class="g-capcha">
+                    <input type="hidden" name="captcha_sid" value="{{ result.CAPTCHA_CODE }}"/>
+                    <div class="bx-captcha">
+                        <img src="/bitrix/tools/captcha.php?captcha_sid={{ result.CAPTCHA_CODE }}" width="180"
+                             height="40" alt="CAPTCHA"/>
+                        <input type="text" name="captcha_word" maxlength="50" value="" autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="g-capcha-desc">Благодаря этому инструменту мы уверены, что вы – человек, а не робот!</div>
+            {% endif %}
+            <input class="submit btn" value="Зарегистрироваться" type="submit">
+            </form>
+            <div class="already-registered">Уже зарегистрированы? <a href="{{ result.AUTH_AUTH_URL }}"
+                                                                     class="border-bottom-solid">Авторизуйтесь</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    $(document).ready(function ($) {
+        $('body').on('change', '[name="USER_LOGIN"]', function () {
+            var val=$(this).val();
+            $('[name="USER_NAME"]').val(val);
+            $('[name="USER_EMAIL"]').val(val);
+        });
+    })
+</script>

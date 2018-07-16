@@ -1,0 +1,23 @@
+<section class="laboratories__droptabs">
+    <div class="laboratories__droptabs__card">
+        <div class="laboratories__droptabs__header">
+            <div class="laboratories__droptabs__header-item">
+                {% if group.PICTURE %}
+                <img src="{{ group.PICTURE }}" alt="{{ group.NAME }}">
+                {% endif %}
+                <div class="title">{{ group.NAME }}</div>
+            </div>
+        </div>
+        <div class="laboratories__droptabs__content">
+            {% for item in group.ITEMS %}
+            {{ AddBitrixActions(item) }}
+            <div class="laboratories__droptabs__content-item"  id="{{ GetEditAreaId(item) }}">
+                <div class="droptabs__content-item__header">{{ item.NAME }}</div>
+                <div class="droptabs__content-item__body droptabs-data">
+                    {{ item.PREVIEW_TEXT }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

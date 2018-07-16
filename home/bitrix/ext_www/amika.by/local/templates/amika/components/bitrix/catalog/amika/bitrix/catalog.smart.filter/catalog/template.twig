@@ -1,0 +1,42 @@
+<section class="pick-up-paint-wrap">
+    <div class="pick-up-paint clearfix">
+        <div class="pick-up-paint__title">Подобрать порошковую краску</div>
+        <form id="catalog-smart-filter" class="pick-up-paint__row" action="{{ result.FORM_ACTION }}" method="get">
+            {% for item in result.HIDDEN %}
+                <input type="hidden" name="{{ item.CONTROL_NAME }}" id="{{ item.CONTROL_ID }}"
+                       value="{{ item.HTML_VALUE }}"/>
+            {% endfor %}
+            <input type="hidden" name="AJAX_L" value="Y">
+            <input type="hidden" name="set_filter" value="подобрать">
+            {% for item in result.ITEMS %}
+                {% if item.VALUES is not empty %}
+                    {% if item.DISPLAY_TYPE=="P" %}
+                        <div class="pick-up-paint__col pick-up-paint__field2">
+                            <label class="pick-up-paint__label">{{ item.NAME }}:</label>
+                            <select name="{{ item.CURRENT.CONTROL_NAME_ALT }}" class="pick-up-paint__select">
+                                <option value="">Выберите</option>
+                                {% for value in item.VALUES %}
+                                    <option {{ value.DISABLED_ATTR }} {{ value.CHECKED_ATTR }}
+                                            value="{{ value.HTML_VALUE_ALT }}">{{ value.VALUE }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <div class="pick-up-paint__col pick-up-paint__active">
+                <button type="submit" name="set_filter" class="btn pick-up-paint__button">подобрать</button>
+            </div>
+        </form>
+    </div>
+    {% if result.SELECTED is not empty %}
+        <ul class="pick-up-paint-tags clearfix">
+            {% for item in result.SELECTED %}
+                <li class="pick-up-paint-tags__item">
+                    <span>{{ item.NAME }}</span>
+                    <a href="{{ item.HREF }}" class="pick-up-paint-tags__delete"></a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</section>

@@ -1,0 +1,7 @@
+<select class="mobile-news-filter__options">
+    {% for item in result.SECTIONS %}
+        <option {{ item.SELECTED }} value="{{ item.SECTION_PAGE_URL }}">
+            {{ item.NAME }}
+        </option>
+    {% endfor %}
+</select>

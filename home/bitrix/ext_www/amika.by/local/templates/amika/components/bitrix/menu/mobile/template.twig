@@ -1,0 +1,11 @@
+{% if result is not empty %}
+<ul class="mobile-menu">
+    {% for item in result %}
+        {% if item.SELECTED %}
+            <li><a href="{{ item.LINK }}" class="active">{{ item.TEXT }}</a></li>
+        {% else %}
+            <li><a href="{{ item.LINK }}">{{ item.TEXT }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}

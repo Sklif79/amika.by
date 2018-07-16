@@ -1,0 +1,204 @@
+<div class="content-body">
+    <div class="content-account">
+        <div class="container">
+            <div class="account-header clearfix">
+                <h1 class="user-name">{{ result.arUser.NAME|default('Введите Имя') }}</h1>
+                <a href="#fb-form-password" class="js-open-modal border-btn btn" title="">Сменить пароль</a>
+            </div>
+        </div>
+        <form method="post" name="form1" class="profile-edit" action="{{ result.FORM_TARGET }}"
+              enctype="multipart/form-data">
+            {{ result.BX_SESSION_CHECK }}
+            <input type="hidden" name="lang" value="{{ result.LANG }}"/>
+            <input type="hidden" name="ID" value="{{ result.ID }}"/>
+            <input type="hidden" name="LOGIN" value="{{ result.arUser.LOGIN }}"/>
+            <div class="container">
+                <div class="top-section">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="field__wrap">
+                                <label class="field__label custom-placeholder-wrap">
+                                    <input class="field"
+                                           name="NAME"
+                                           value="{{ result.arUser.NAME }}"
+                                           data-validation="text"
+                                           placeholder=""
+                                           required
+                                           type="text">
+                                    <span class="custom-placeholder">Фамилия, имя</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="field__wrap">
+                                <label class="field__label custom-placeholder-wrap">
+                                    <input class="field" name="EMAIL" value="{{ result.arUser.EMAIL }}"
+                                           data-validation="email" placeholder="" required
+                                           type="email">
+                                    <span class="custom-placeholder">Электронная почта</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="field__wrap">
+                                <label class="field__label custom-placeholder-wrap">
+                                    <input class="field tel"
+                                           name="PERSONAL_PHONE"
+                                           value="{{ result.arUser.PERSONAL_PHONE }}"
+                                           data-validation="custom"
+                                           data-validation-regexp="[0-9\-\(\)\s]+"
+                                           placeholder=""
+                                           required
+                                           type="text">
+                                    <span class="custom-placeholder">Номер телефона</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="center-section">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="order-detail__title">Данные организации</div>
+                            <div class="field__wrap">
+                                <label class="field__label custom-placeholder-wrap">
+                                    <input class="field" data-validation="text" name="UF_ORG_NAME"
+                                           value="{{ result.arUser.UF_ORG_NAME }}" placeholder="" required
+                                           type="text">
+                                    <span class="custom-placeholder">Название организации</span>
+                                </label>
+                            </div>
+                            <div class="field__wrap">
+                                <label class="field__label custom-placeholder-wrap">
+                                    <input class="field" data-validation="text" name="UF_ORG_UR"
+                                           value="{{ result.arUser.UF_ORG_UR }}" placeholder="" required
+                                           type="text">
+                                    <span class="custom-placeholder">Юридический адрес</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="order-detail__title">Банковские реквизиты</div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_BANK_NAME"
+                                                   value="{{ result.arUser.UF_BANK_NAME }}" placeholder="" required
+                                                   type="text">
+                                            <span class="custom-placeholder">Название банка</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_BANK_CODE"
+                                                   value="{{ result.arUser.UF_BANK_CODE }}" placeholder="" required
+                                                   type="text">
+                                            <span class="custom-placeholder">Код банка</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_BANK_ADRES"
+                                                   value="{{ result.arUser.UF_BANK_ADRES }}" placeholder=""
+                                                   required
+                                                   type="text">
+                                            <span class="custom-placeholder">Адрес банка</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_BANK_ACCOUNT"
+                                                   value="{{ result.arUser.UF_BANK_ACCOUNT }}" placeholder=""
+                                                   required
+                                                   type="text">
+                                            <span class="custom-placeholder">Расчётный счёт</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_ORG_UPN"
+                                                   value="{{ result.arUser.UF_ORG_UPN }}" placeholder="" required
+                                                   type="text">
+                                            <span class="custom-placeholder">УНП/ИНН</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_BANK_BILL_RF"
+                                                   value="{{ result.arUser.UF_BANK_BILL_RF }}" placeholder=""
+                                                   type="text">
+                                            <span class="custom-placeholder">Корреспондентский счет (для резидентов РФ)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_BANK_KPP_RF"
+                                                   value="{{ result.arUser.UF_BANK_KPP_RF }}" placeholder=""
+                                                   type="text">
+                                            <span class="custom-placeholder">КПП (для резидентов РФ)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="field__wrap">
+                                        <label class="field__label custom-placeholder-wrap">
+                                            <input class="field" data-validation="text" name="UF_BANK_OKPO"
+                                                   value="{{ result.arUser.UF_BANK_OKPO }}" placeholder=""
+                                                   type="text">
+                                            <span class="custom-placeholder">ОКПО</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="bottom-section">
+                    <div class="order-detail__title">Привязать аккаунты социальных сетей</div>
+                    {{ APPLICATION.IncludeComponent('bitrix:socserv.auth.split','site',result.socserv,result.component) }}
+                </div>
+                <div class="clearfix"></div>
+                <input name="save" class="submit btn" value="Сохранить ДАнные" type="submit">
+            </div>
+    </div>
+    </form>
+</div>
+</div>
+
+
+<script>
+    $(document).ready(function ($) {
+        $('body').on('change', '.profile-edit [name="EMAIL"]', function () {
+            var val = $(this).val();
+            $('.profile-edit [name="LOGIN"]').val(val);
+        });
+    })
+</script>

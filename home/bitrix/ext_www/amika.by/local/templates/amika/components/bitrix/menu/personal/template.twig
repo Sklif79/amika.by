@@ -1,0 +1,15 @@
+{% if result is not empty %}
+    <ul class="activiti {{ params.CLASS }}">
+        {% for item in result %}
+            <li>
+                <a
+                        href="{{ item.LINK }}"
+                        class="{{ item.PARAMS.CLASS }}"
+                        target="{{ item.PARAMS.TARGET }}"
+                >
+                    {{ item.TEXT }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

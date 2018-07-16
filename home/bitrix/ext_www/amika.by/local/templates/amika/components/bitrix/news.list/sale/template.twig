@@ -1,0 +1,20 @@
+{% if result.ITEMS is not empty %}
+    <section class="sale-catalogue">
+        <div class="sale-catalogue__title">Распродажа:</div>
+        <div class="js-sale-slider sale-catalogue__slider">
+            {% for item in result.ITEMS %}
+                {{ AddBitrixActions(item) }}
+                <div class="item" id="{{ GetEditAreaId(item) }}">
+                    <a href="#{{ item.PROPERTIES.POPUP.VALUE }}" class="sale-catalogue__item js-open-modal" title="">
+                        <img class="sale-catalogue__item__pic"
+                             src="{{ item.PREVIEW_PICTURE.SRC }}"
+                             alt="{{ item.NAME }}">
+                        <h2 class="sale-catalogue__item__title">
+                            {{ item.NAME }}<br><br>{{ item.PROPERTIES.NAME_2.VALUE }}
+                        </h2>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

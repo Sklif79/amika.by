@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Заголовок | Амика</title>
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="cmsmagazine" content="aa4cc816c3e233bc68ec4386b3eabcf3" />
+		<link rel="shortcut icon" href="images/i/favicon.ico">
+		<!-- CSS include -->
+		<link rel = "stylesheet" href = "libs/bootstrap/grid-core-3.3.1.css" /> 
+		<link rel = "stylesheet" href = "libs/owl-carousel/assets/owl.carousel.css" />
+		<link rel = "stylesheet" href = "libs/owl-carousel/assets/animate.css" />
+		<link rel = "stylesheet" href = "fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel = "stylesheet" href = "libs/fancybox/jquery.fancybox.css" />	
+		<link rel = "stylesheet" href = "libs/jquery-form-validator/theme-default.css" />
+		<link rel = "stylesheet" href = "libs/responsive-table/jquery.rtResponsiveTables.css" />
+		<!-- // CSS include -->
+		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<!--[if lt IE 9]>
+			<script src="libs/html5shiv/es5-shim.min.js"></script>
+			<script src="libs/html5shiv/html5shiv.min.js"></script>
+			<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+			<script src="libs/respond/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="css/media.css" />
+		<!-- яндекс карта -->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script type="text/javascript">			
+			ymaps.ready(init);
+			var myMap, 
+				myPlacemark;
+
+			function init(){ 
+				myMap=new ymaps.Map("map", {
+					center: [53.677011,27.097172],
+					zoom: 14,
+					controls: ["zoomControl","geolocationControl"]
+				}); 					
+				var myPlacemark=new ymaps.Placemark([53.677011,27.097172], {}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'images/i/map-mark.png',
+					iconImageSize: [129,34],
+					iconImageOffset:[-17, -64]
+				});				
+				myMap.geoObjects.add(myPlacemark);
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div class="bd-site">
+		
+			<div class = "b-fixed-footer">
+			<div class = "b-footer-padding">
+			
+			<div class="mobile-aside">
+				<div class="mobile-aside__header clearfix">
+					<form class="header__search mobile-aside__search search">
+						<input class="search__txt" value="" placeholder="Поиск..." type="search">
+						<input type="submit" class="search__submit" value="">
+					</form>
+					<div class="back js-back clerafix">Назад</div>
+				</div>
+				<a href="" title="" class="sklad-online"><span>Склад-онлайн</span></a>
+				<ul class="mobile-menu">
+					<li><a href="" title="">КАТАЛОГ</a></li>
+					<li><a href="" title="">ПРОИЗВОДСТВО</a></li>
+					<li><a href="" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+					<li><a href="" title="">FAQ</a></li>
+					<li><a href="" title="">НОВОСТИ</a></li>
+					<li><a href="" title="">КОНТАКТЫ</a></li>
+					<li><a href="" title="">Особенности нанесения ПК</a></li>
+					<li><a href="" title="">Мастер-классы, семинары</a></li>
+					<li><a href="" title="">Видео</a></li>
+				</ul>
+				<div class="header__phone-content mobile__phone-content">
+					<div>
+						<b>Для зарубежных партнеров:</b>
+						<p>
+							<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+							<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+							<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+							skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+							<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a>
+						</p>
+					</div>
+					<div>
+						<b>Для партнеров Республики Беларусь:</b>
+						<p>
+							<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+							<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+						</p>
+					</div>	
+					<div>
+						<b>Юридический и почтовый адрес:</b>
+						<p>ул. Строителей, 6, г. Держинск, <br>Минская обл., Беларусь, 222720 </p>
+					</div>	
+				</div>
+				<a href="" title="" class="re-call boder-dott">Обратный звонок</a>
+				<ul class="lang clerfix">
+					<li><a href="" title="">EN</a></li>
+					<li class="active"><a href="" title="">RU</a></li>
+				</ul>
+			</div>
+		
+		<div class="wr-header">
+		
+			<header class="mobile-header clearfix">
+				<img src="images/i/mobile-logo.png" alt="">
+				<div class="menu-trigger js-menu-trigger"></div>
+				<div class="search-trigger"></div>
+			</header>
+			
+			<header class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+						<a href="/" class="header__logo">
+							<img src="images/i/logo.png" alt="">
+							<div>Порошковые краски</div>
+						</a>
+						</div>
+						<div class="col-lg-9">
+							<nav class="clearfix">
+								<ul class="menu">
+									<li><a href="" title="">КАТАЛОГ</a></li>
+									<li class="has-children"><a href="" title="">ПРОИЗВОДСТВО</a>
+										<ul class="sub-menu">
+											<li><a href="" title="">ПРОИЗВОДСТВО</a></li>
+											<li><a href="" title="">Лаборатория</a></li>
+										</ul>
+									</li>
+									<li><a href="" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+									<li><a href="" title="">FAQ</a></li>
+									<li><a href="" title="">НОВОСТИ</a></li>
+									<li><a href="" title="">КОНТАКТЫ</a></li>
+								</ul>
+								<div class="more-click">
+									<i class="js-more-click"></i>
+									<div class="more-click__sub">
+										<ul>
+											<li><a href="" title="">Особенности нанесения ПК</a></li>
+											<li><a href="" title="">Мастер-классы, семинары</a></li>
+											<li><a href="" title="">Видео</a></li>
+										</ul>
+									</div>
+								</div>
+								<ul class="lang">
+									<li><a href="" title="">EN</a></li>
+									<li class="active"><a href="" title="">RU</a></li>
+								</ul>
+								<div class="scroll-menu clearfix">
+									<ul class="menu">
+										<li><a href="" title="">КАТАЛОГ</a></li>
+										<li><a href="" title="">FAQ</a></li>
+										<li><a href="" title=""><span>Склад-онлайн</span></a></li>
+									</ul>
+									<ul class="scroll-phone-list">
+										<li class="scroll-phone-list__mail">
+											<span class = "new-mail">
+												<b>amika@mav.by</b>
+												<div>Электронная почтадля РБ</div>
+												<b>amika.export@mav.by</b>
+												<div>Для зарубежных партнёров</div>
+											</span>
+										</li>
+										<li class="scroll-phone-list__phone first">
+											+375 (44) <b>660-10-39</b>      
+											<div>Беларусь</div>
+										</li>
+										<li class="scroll-phone-list__phone">
+											+7 (495) <b>258-88-96</b>
+											<div>Россия</div>
+										</li>
+									</ul>
+								</div>
+							</nav>
+							<div class="clearfix">
+								<form class="header__search search">
+									<input class="search__txt" value="" placeholder="Поиск..." type="search">
+									<input type="submit" class="search__submit" value="">
+								</form>
+								<div class="header__phone phone">
+									<div class="js-header__phone"><i></i><a href = "tel:+375296601039">+375 (29) 660-10-39</a></div>
+									<div class="header__phone-content">
+										<div>
+						<b>Для зарубежных партнеров:</b>
+						<p>
+							<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+							<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+							<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+							skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+							<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a>
+						</p>
+					</div>
+					<div>
+						<b>Для партнеров Республики Беларусь:</b>
+						<p>
+							<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+							<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+						</p>
+					</div>	
+					<div>
+						<b>Юридический и почтовый адрес:</b>
+						<p>ул. Строителей, 6, г. Держинск, <br>Минская обл., Беларусь, 222720 </p>
+					</div>	
+									</div>
+								</div>
+								<a href="" title="" class="re-call boder-dott">Обратный звонок</a>
+								<a href="" title="" class="btn border-solid sklad-online"><i></i>Склад-онлайн</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+		
+		</div>
+		
+		<div class="content-header">
+			<div class="container">
+				<div class="content-header__inner">
+					<div class="content-header__data">
+						<h1 class="page-title">О компании</h1>
+						<ul class="breadcrums clearfix">
+							<li><a href="#" title="">Главная</a></li>
+							<li class="active"><a href="#" title="">О компании</a></li>
+						</ul>					
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="content-under-head clearfix">
+			<div class="container">
+				<div class="flex-row">
+					<img src="images/i/logo-about.png" alt="">
+					<div class="content-under-head__slogan">Порошковые краски <b>AMIKA</b> – <br>для тех, кто ценит время</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="about-bg-color"></div>
+		
+		<div class="about-teaser-mav">
+			<div class="container">
+				<div class="flex-row">
+					<a href = "www.mav.by" title = ""><img src="images/logo-mav-about.png" alt=""></a>
+					<div class="text">
+						<div class="about-teaser-mav__title">О КОМПАНИИ «MAV»</div>
+						<p>Компания MAV - основной игрок на рынке водно-дисперсионных и органо-растворимых материалов 
+в Республике Беларусь и один из самых известных лакокрасочных брэндов в стране (данные предоставлены 
+Агентством MPP Consulting, апрель 2017г.). Подробно с компанией, её историей и ассортиментом можно 
+ознакомиться на официальном сайте <a href = "www.mav.by" title = "" class = "border-bottom-solid">www.mav.by</a>. Одно из направлений лакокрасочного бизнеса MAV – 
+производство порошковых красок AMIKA. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="about-teaser-amika">
+			<div class="container">
+				<div class="about-teaser-amika__wr">
+					<div class="flex-row">
+						<img src="images/teaser-logo-amika.png" alt="">
+						<div class="text">
+							<div class="about-teaser-amika__title">AMIKA</div>
+							<div class="text-descr">
+							<p>Производим порошковую краску качественно и оперативно, понимаем нашего клиента лучше, 
+	чем это делают другие производители. 
+	Постоянно проводим испытания для подтверждения качества порошковой краски AMIKA в собственной 
+	аккредитованной лаборатории (область аккредитации 60+ показателей), и в международных 
+	исследовательских центрах. 
+	Поставляем в Республику Беларусь и в страны Европейского Союза, Украину и Российскую Федерацию.
+	Порошковые краски AMIKA не массовое производство, и мы не ставим своей целью стать им. 
+	Мы не лидеры рынка порошковых материалов, а команда молодых, гибких, энергичных и нацеленных 
+	на результат людей. Производим порошковую краску качественно и оперативно, понимаем нашего клиента лучше, чем это делают другие производители. Постоянно проводим испытания для подтверждения качества порошковой краски AMIKA в собственной аккредитованной лаборатории (область аккредитации 60+ показателей), и в международных исследовательских центрах. Поставляем в Республику Беларусь и в страны Европейского Союза, Украину и Российскую Федерацию. Порошковые краски AMIKA не массовое производство, и мы не ставим своей целью стать им. Мы не лидеры рынка порошковых материалов, а команда молодых, гибких, энергичных и нацеленных на результат людей.</p> 
+	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="about-body-content">
+			<div class="container">
+				<div class="slider-group">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="slider-group__item">
+								<div class="slider-group__sl">
+									<div class="js__slider-group__sl">
+										<div class="item">
+											<a href="images/sert1.jpg" class = "zoom title=""><img src="images/sert1.jpg" alt=""></a>
+										</div>
+										<div class="item">
+											<a href="images/sert1.jpg" class = "zoom" title=""><img src="images/sert1.jpg" alt=""></a>
+										</div>
+									</div>
+								</div>
+								<div class="slider-group__item__title">КАЧЕСТВО: СЕРТИФИЦИРОВАННОЕ <br>ПРОИЗВОДСТВО. ISO</div>
+								<div class="text-descr-small">
+								<p>Система менеджмента качества сертифицирована по стандартам 
+ISO 9001-2009, DIN EN ISO 9001:2008. Отслеживаем и храним информацию 
+обо всех этапах взаимодействия с клиентом, сохраняем в течение 
+18 месяцев арбитражные пробы и натуральные выкраски на каждую 
+партию выпущенной продукции. Потребитель порошковой краски AMIKA застрахован от претензий своего отдела контроля качества по несовпадению оттенков цвета. Потому что знает: мы гарантируем отсутствие разнооттеночности между партиями, произведенными в разное время. Поэтому клиенты говорят нам спасибо за возможность закупки порошковой краски исходя из потребности своего производства и могут правильно планировать ритмичность закупок. На каждую партию порошковых красок AMIKA выдаем паспорт качества и несем полную ответственность за произведенный продукт. </p>
+</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="slider-group__item">
+								<div class="slider-group__sl">
+									<div class="js__slider-group__sl">
+										<div class="item">
+											<a href="images/sert2.jpg" class = "zoom" title=""><img src="images/sert2.jpg" alt=""></a>
+										</div>
+										<div class="item">
+											<a href="images/sert2.jpg" class = "zoom" title=""><img src="images/sert2.jpg" alt=""></a>
+										</div>
+									</div>
+								</div>
+								<div class="slider-group__item__title">КАЧЕСТВО: QUALICOAT УЖЕ У ВАС <br>НА ПРОИЗВОДСТВЕ</div>
+								<div class="text-descr-small">
+								<p>Архитектурно-фасадные конструкции, алюминиевый профиль, используемый 
+при отделке фасадов, красим только порошковой краской AMIKA серии 
+P-PL-1321-Q.
+Серия P-PL-1321-Q получила одобрение на соответствие международным 
+требованиям QUALICOAT*(Approval №1370, №1387 размещены на официальном 
+сайте Qualicoat).  Провели международный аудит всех стадий производства порошковой краски AMIKA на соответствие требованиям к производству архитектурных покрытий: начиная от процедуры выбора поставщика сырья и заканчивая контролем качества готовой продукции. Свойства покрытий данной серии сохраняются на протяжении 10 – 15 лет (и более!) в условиях эксплуатации на открытом воздухе при постоянном воздействии атмосферных факторов. *Сертификат QUALICOAT -международный знак качества для порошковых красок, используемых для окраски металла в архитектурном строительстве. </p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="container">
+				<div class="assort-about">
+					<div class="flex-row">
+						<img src="images/amika-box.png" alt="">
+						<div class="text">
+							<div class="assort-about__title">Ассортимент</div>
+								<div class="text-descr">
+							<p>По данным на апрель 2017 года ассортиментный портфель порошковых красок AMIKA составляет 
+838+ наименований. Следуем принципу невозможности производства всего и для всех. Это как не бывает 
+мишленовского ресторана на 250 столиков. Поэтому, выбрав целевые сегменты, работаем над созданием 
+и совершенствования материалов для этих ниш. По итогам 2016 года 80% объема продаж занимают порошковые 
+краски общепромышленного назначения для торговогои складского оборудования, приборостроения, 
+потребительских товаров, строительного и лифтового оборудования, элементов машиностроения 
+и сельскохозяйственной техники. Остальные 20% - это порошковые краски AMIKA специального назначения. Например, эпоксидно-полиэфирная тонкопленочная белая порошковая краска, стойкая к перегреву в газовых печах, порошковая краска для технологии dye-ink syblimation (сублимации), антивандальные краски, материалы с высокой дегазирующей способностью и т.д. В чём еще наше отличие? Мы не применяем отвердитель триглицидилизоцианурат (запрещен к использованию в странах ЕС). К сожалению, его использование пока ещё разрешено в Российской Федерации, Республике Беларусь и Украине. Да, мы дорожим своей репутацией и поэтому отвечаем за качество, сроки и сервис.</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="container">
+				<div class="about-best">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="about-best__item best-1">
+								<div class="about-best__title">Производим быстро, <br>беремся сразу</div>
+								<p>На складе всегда находится месячный запас готовой продукции. 
+Пополнение каждый день. Если Вашей позиции нет в наличии 
+оперативно произведём по предзаказу в согласованные сроки. 
+От заказа до отгрузки - не более 5 рабочих дней. </p>
+<div class="button-area">
+	<div class="slogan">Разместите заказ <br class="visible-xs">на электронный ящик <br>
+amika.export@mav.by <br class="visible-xs">и начинайте обратный отсчет.</div>
+	<a href="" title="" class="btn">Хочу за 5 дней</a>
+</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="about-best__item best-2">
+								<div class="about-best__title">Клиенты спокойны</div>
+								<p>Потребителя порошковой краски AMIKA отличает полная концентрация 
+на продвижении собственного продукта, потому что остальные вопросы 
+решаем мы. Работаем по системе "всё включено": проводим аудит 
+производства, подбираем порошковую краску, замеряем режимы печи, 
+настраиваем окрасочное оборудование, осуществляем технический 
+контроль и консультируем по возникающим вопросам. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="container">
+				<div class="about-best">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="about-best__item best-3">
+								<div class="about-best__title">Ценим труд</div>
+								<p>Бесплатно образцы не отдаём и просим оплатить стандартную 
+стоимость. Потому что потенциальный Клиент порошковой 
+краски AMIKA также как и мы ценит труд каждого человека 
+и труд сотрудников, которые производят порошковую краску AMIKA.</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="about-best__item best-4">
+								<div class="about-best__title">Новые стандарты</div>
+								<p>Выбирая порошковую краску AMIKA – наш Потребитель открывает 
+новые стандарты работы, понимает и принимает изменения, 
+которые происходят в мире. Желает большего от себя и требует 
+движения вперед от других. Поэтому, призываем: идите вместе 
+с нами вперед и присоединяйтесь к нам прямо сейчас, пока есть 
+еще время на изменения. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -->
+			<div class="container">
+				<div class="social-actives">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="insta-block">
+								<div class="insta-block__header"><span>Становимся ближе</span> </div>
+<p>Запустили брэндированный сайт <a href="" title="" class="border-bottom-solid">www.amika.by</a>, завели страницу в Instagram <a href="" title="" class="border-bottom-solid">@amika.powdercoatings</a>.
+5 дней в неделю мы открыты для посещений, проведения экскурсий и встреч. Поэтому наши Потребители знают и видели, как происходит процесс производства порошковых красок AMIKA.
+</p>
+								<div class="insta-block__vijet">
+									<div class="nsta-block__vijet-header">
+										Мы в Instagram
+										<a href="" title="" class="border-bottom-solid">@amika.powdercoatings</a>
+									</div>
+									<div class="row">
+										<div class="col-lg-4 col-xs-4"><img src="images/insta.jpg" alt=""></div>
+										<div class="col-lg-4 col-xs-4"><img src="images/insta2.jpg" alt=""></div>
+										<div class="col-lg-4 col-xs-4"><img src="images/insta3.jpg" alt=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="social-actives__feedback">
+								<div class="title">Хотите увидеть и Вы как происходит процесс <br>
+производства порошковых красок AMIKA?</div>
+								<p>Тогда ждём Вашу заявку на электронный ящик <br>
+<a href="" title="" class="border-bottom-solid">s.yushkevich@mav.by</a> и директор по развитию лично свяжется <br>
+с Вами для согласования даты и обсуждения деталей посещения.</p>
+								<form>
+									<div class="field__wrap">
+										<label class="field__label custom-placeholder-wrap">
+											<input class="field" placeholder="" type="text">
+											<span class="custom-placeholder">Ваше имя...</span>
+										</label>
+									</div>
+									<div class="field__wrap">
+										<label class="field__label custom-placeholder-wrap">
+											<input class="field" data-validation="email"  placeholder="" type="email">
+											<span class="custom-placeholder">Ваша электронная почта...</span>
+										</label>
+									</div>
+									<div class="field__wrap">
+										<label class="field__label custom-placeholder-wrap">
+											<input class="field tel" data-validation="custom" data-validation-regexp="[0-9\-\(\)\s]+" placeholder="" type="text">
+											<span class="custom-placeholder">Ваш номер телефона...</span>
+										</label>
+									</div>
+									<div class="field__wrap">
+										<label class="field__label custom-placeholder-wrap">
+											<span class="block">
+												<textarea class="field custom-textarea" placeholder=""></textarea>
+											</span>
+											<span class="custom-placeholder textarea-custom-placeholder">Сообщение...</span>
+										</label>
+									</div>
+									<div class="g-capcha"><img src="images/capcha.jpg" alt=""></div>
+									<div class="g-capcha-desc">Благодаря этому инструменту мы уверены, что вы – человек, а не робот!</div>
+									<input class="submit btn" value="Отправить сообщение" type="submit">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="do-it-area">
+					<a href="" title="">Закажите</a> , <a href="" title="">Приезжайте</a>, <a href="" title="">пишите</a>, <a href="" title="">звоните</a>, <a href="" title="">подписывайте на нас</a>
+					<div class="clearfix"></div>
+					<p>и начинайте своё движение вперед уже сегодня!</p>
+				</div>
+			</div>
+		</div>
+		
+		<a href="" title="" class="sclad-mobile"><div><span>Перейти в Склад-онлайн</span></div></a>
+		
+		
+    </div>
+		</div>
+			
+		<footer class="footer">
+			<div class="footer__white">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="footer__copyright">
+								<img src="images/i/footer-logo.png" alt="">
+								<span class="only-desctop">
+									<p class="copyright">© AMIKA™, 2017 <br>Все права защищены</p>
+									<a href="" title="" class="go-map border-bottom-solid">Карта сайта</a>
+									<p class="dev">Сайт разработан <br>компанией <a href="" title="" class="border-bottom-solid">«WebCompany»</a></p>
+								</span>
+							</div>
+						</div>
+						<div class="col-lg-5">
+							<div class="footer__contacnts">
+								<img src="images/i/logo-mav.png" alt="">
+								<p>ЧУП "МАВ"</p>
+								<div class="addres">ул. Строителей, 6, г. Держинск, Минская обл., Беларусь, 222720</div>
+								<ul class="phones">
+									<li>
+										<b>Для зарубежных партнеров:</b>
+										<p>
+											<a href = "tel:+375171661327">+375 (1716) 6 13 27</a><br>
+											<a href = "tel:+375296607088">+375 (29) 660 70 88</a><br>
+											<a href = "tel:+79621918097">+7 (962) 191 80 97</a><br>
+										skype - <a href="skype:amika.export?call" class="border-bottom-solid" title="">amika.export</a><br>
+										<a href="mailto:amika.export@mav.by" title="" class="border-bottom-solid">amika.export@mav.by</a></p>
+									</li>
+									<li>
+										<b>Для партнеров Республики Беларусь:</b>
+										<p>
+											<a href = "tel:+375296601039">+375 (29) 660 10 39</a><br>
+											<a href="mailto:amika@mav.by" title="" class="border-bottom-solid">amika@mav.by</a>
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="footer__actions">
+								<div class="a-wr"><a href="" title="" class="btn btn-large">Банковские реквизиты</a></div>
+								<div class="a-wr"><a href="" title="" class="btn btn-large">Карта проезда</a></div>
+							</div>
+						</div>
+						
+						<div class="mobile-copyright">
+							<div class="footer__copyright">
+								<p class="copyright">© AMIKA™, 2017 <br>Все права защищены</p>
+								<a href="" title="" class="go-map border-bottom-solid">Карта сайта</a>
+								<p class="dev">Сайт разработан <br>компанией <a href="" title="" class="border-bottom-solid">«WebCompany»</a></p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="footer__gray">
+				<nav class="container">
+					<ul class="menu">
+						<li><a href="#" title="">КАТАЛОГ</a></li>
+						<li><a href="#" title="">ПРОИЗВОДСТВО</a></li>
+						<li><a href="#" title="">Лаборатория</a></li>
+						<li><a href="#" title="">СЕРВИСНЫЙ ЦЕНТР</a></li>
+						<li><a href="#" title="">Мастер-классы, семинары</a></li>
+						<li><a href="#" title="">НОВОСТИ</a></li>
+						<li><a href="#" title="">FAQ</a></li>						
+						<li><a href="#" title="">КОНТАКТЫ</a></li>
+					</ul>
+					<div class="footer-more-click"> 
+						<i class="js-footer-more-click"></i>
+						<div class="footer-more-click__sub">
+							<ul>
+								<li><a href="" title="">Особенности нанесения ПК</a></li>
+								<li><a href="" title="">Мастер-классы, семинары</a></li>
+								<li><a href="" title="">Видео</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</footer>
+		
+		<!-- окно по тамеру -->
+		<div id="fb-form-rosa" class="g-modal-win" style="display: none;">
+			<div class="g-modal-win__content">
+				<div class="g-modal-win__content-title"><span>185</span> компании <b>уже знают</b> свою точку росы на участке порошковой окраски. <br><span>Будь подготовлен</span> - закажи проведение измерений <b>абсолютно бесплатно.</b></div>	
+				<form class="g-mail-form">
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field" data-validation="text" placeholder=""  required type="text">
+							<span class="custom-placeholder">Имя...</span>
+						</label>
+					</div>
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field tel" data-validation="custom" data-validation-regexp="[0-9\-\(\)\s]+"  placeholder=""  required type="text">
+							<span class="custom-placeholder">Телефон...</span>
+						</label>
+					</div>
+					<div class="field__wrap">
+						<label class="field__label custom-placeholder-wrap">
+							<input class="field" data-validation="email" placeholder=""  required type="email">
+							<span class="custom-placeholder">E-mail...</span>
+						</label>
+					</div>
+					<input class="submit btn" name="" value="Отправить запрос" type="submit">
+				</form>				
+			</div>
+		</div>
+		<!-- -->
+		
+		<div class="social-fixed">
+			<div class="social-fixed__title">Будем <br>дружить!</div>
+			<a href="" title="" class="vk"><i></i></a>
+			<a href="" title="" class="fb"><i></i></a>
+			<a href="" title="" class="in"><i></i></a>
+		</div>
+		
+		<div class="social-fixed-trigger">
+			<div class="social-fixed-trigger__title">Будем дружить!</div>			
+		</div>
+		
+		</div>
+		
+		<!-- JS include -->
+		<script src = "libs/jquery/jquery-1.11.1.min.js"></script>
+		<script src="libs/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+		<script src="libs/jquery-ui-1.11.4.custom/jquery.ui.datepicker-ru.js"></script>
+		<script src = "libs/owl-carousel/owl.carousel.min.js"></script>
+		<script src = "libs/fancybox/jquery.fancybox.pack.js"></script>	
+		<script src = "libs/jquery-form-validator/jquery.form-validator.js"></script>
+		<script src="libs/responsive-table/jquery.rtResponsiveTables.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>		
+		<script src = "js/common.js"></script>
+		<!-- // JS include -->
+		<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+		<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+	</body>
+</html>

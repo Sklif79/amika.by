@@ -1,0 +1,17 @@
+{% if result.GROUP[item.SECTION] is not empty %}
+    <div class="container bb-1">
+        <div class="about-best">
+            <div class="row">
+                {% for group in result.GROUP[item.SECTION] %}
+                    {{ AddBitrixActions(group) }}
+                    <div id="{{ GetEditAreaId(group) }}" class="col-lg-{{ item.COL_LG }}">
+                        <div class="about-best__item best-1" style="background: url({{ group.PREVIEW_PICTURE }}) no-repeat top left">
+                            <div class="about-best__title">{{ group.PREVIEW_TEXT }}</div>
+                            {{ group.DETAIL_TEXT }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
