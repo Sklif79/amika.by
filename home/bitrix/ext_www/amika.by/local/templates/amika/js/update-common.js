@@ -1,29 +1,33 @@
 $(document).ready(function ($) {
 // Скрипты доверстанных страниц ##############################
 // Слайдер скидки
-    $('.js-sale-slider').owlCarousel({
-        smartSpeed: 875, // плавность смены слайда
-        navText: ['', ''],
-        nav: true,
-        loop: true,
-        margin: 15,
-        autoplay: false,
-        smartSpeed: 1750, // плавность смены слайда
-        navigation: true,
-        singleItem: true,
-        slideSpeed: 1800,
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                mouseDrag: false,
-                touchDrag: false,
-                pullDrag: false,
-                items: 4,
-                smartSpeed: 1750 // плавность смены слайда
-            }
-        }
+//     $('.js-sale-slider').owlCarousel({
+//         smartSpeed: 875, // плавность смены слайда
+//         navText: ['', ''],
+//         nav: true,
+//         loop: true,
+//         margin: 15,
+//         autoplay: false,
+//         smartSpeed: 1750, // плавность смены слайда
+//         navigation: true,
+//         singleItem: true,
+//         slideSpeed: 1800,
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             768: {
+//                 mouseDrag: false,
+//                 touchDrag: false,
+//                 pullDrag: false,
+//                 items: 4,
+//                 smartSpeed: 1750 // плавность смены слайда
+//             }
+//         }
+//     });
+
+    $(document).one('click', '.js_sale-catalog-btn', function () {
+        $('.sale-catalogue__slider').removeClass('sale-slider-view');
     });
 
 
