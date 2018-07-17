@@ -30,6 +30,13 @@ $(document).ready(function ($) {
         $('.sale-catalogue__slider').removeClass('sale-slider-view');
     });
 
+    (function () {
+        if ($('.js-sale-slider .item').length < 6) {
+            $('.js_sale-catalog-btn').hide();
+            $('.sale-catalogue__slider').removeClass('sale-slider-view');
+        }
+    })();
+
 
 // Подобрать краску
     $(".aside-help-choise__trigger").click(function () {
@@ -165,7 +172,6 @@ $(document).ready(function ($) {
             }
         });
     })();
-
 
 
 // Слайдер производства
