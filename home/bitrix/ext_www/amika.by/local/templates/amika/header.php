@@ -53,6 +53,8 @@ if (!$USER->IsAuthorized()) {
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/amika/libs/slick-1.8.0/slick/slick.css");
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/amika/libs/slick-1.8.0/slick/slick-theme.css");
 
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/js/jscrollpane/jquery.jscrollpane.css");
+
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/amika/libs/responsive-table/jquery.rtResponsiveTables.css");
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/amika/css/fonts.css");
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/js/select2/select2.min.css");
@@ -75,6 +77,9 @@ if (!$USER->IsAuthorized()) {
 
 
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/amika/libs/slick-1.8.0/slick/slick.js", true);
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jscrollpane/jquery.mousewheel.js", true);
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jscrollpane/mwheelIntent.js", true);
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jscrollpane/jquery.jscrollpane.min.js", true);
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/amika/libs/masonry/masonry.pkgd.js", true);
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/amika/libs/masonry/imagesloaded.pkgd.js", true);
 

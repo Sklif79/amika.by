@@ -97,12 +97,53 @@ $(document).ready(function () {
 
     $('.tabs-wrap').customTabs();
 
+    jScrollInit();
 
+
+    $(document).on('click', '.order-detail-item__header', function () {
+        var $container = $(this).closest('.order-detail-item').find('.order-detail-item__container'),
+        self = $(this);
+
+        $(this).toggleClass('active').closest('.order-detail-item').find('.order-detail-item__container').slideToggle(
+            200, "linear", function() {
+                jScrollInit();
+
+                if (self.hasClass('active')) {
+                    $container.css('opacity', 1);
+                } else {
+                    $container.css('opacity', 0);
+                }
+            }
+        );
+
+    })
 });
 
-$(document).resize(function () {
+function jScrollInit() {
+    $('.js_scroll-mobile').each(
+        function () {
+            $(this).jScrollPane();
 
-});
+
+            var api = $(this).data('jsp');
+            var throttleTimeout;
+            $(window).bind(
+                'resize',
+                function () {
+                    if (!throttleTimeout) {
+                        throttleTimeout = setTimeout(
+                            function () {
+                                api.reinitialise();
+                                throttleTimeout = null;
+                            },
+                            50
+                        );
+                    }
+                }
+            );
+        }
+    )
+}
 
 
 /**

@@ -37,6 +37,7 @@
                 </div>
                 <div class="panels">
                     <div data-id="order-number" class="panel active">
+                        <!-- /удалить этот блок-->
                         <div class="order-detail">
                             {% if result.BLOCKED == 'N' %}
                                 {% if params.PERSONAL_INFO == 'Y' %}
@@ -88,6 +89,188 @@
                                 <b>Для работы с сервисом заполните банковские реквизитыв настройках профиля!</b>
                             {% endif %}
                         </div>
+                        <!-- /удалить этот блок -->
+
+                        <!-- новый блок -->
+                        <!--
+                        <div class="order-detail-wrap">
+                            <div class="order-detail">
+                                <div class="order-detail-header">
+                                    <div class="order-detail-header__title">Номер заказа</div>
+                                    <div class="order-detail-header__title">Дата заказа</div>
+                                </div>
+                                <div class="order-detail-item">
+                                    <div class="order-detail-item__header">
+                                        <div class="order-detail-item__title"><span>5486-1</span></div>
+                                        <div class="order-detail-item__title">07.09.2018</div>
+                                    </div>
+                                    <div class="order-detail-item__container js_scroll-mobile">
+                                        <div class="order-detail-table-wrap">
+                                        <table class="order-detail-table">
+                                            <tr>
+                                                <th>Наименование товара</th>
+                                                <th>Количество (кг)</th>
+                                                <th>Дата отгрузки</th>
+                                                <th>Статус</th>
+                                            </tr>
+                                            <tr>
+                                                <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                <td>700</td>
+                                                <td>07.09.2018</td>
+                                                <td><div class="order-item-status order-draft">Черновик</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                <td>700</td>
+                                                <td>07.09.2018</td>
+                                                <td><div class="order-item-status order-consideration">На рассмотрении</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                <td>700</td>
+                                                <td>07.09.2018</td>
+                                                <td><div class="order-item-status order-ready">Готов к отгрузке</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                <td>700</td>
+                                                <td>07.09.2018</td>
+                                                <td><div class="order-item-status order-shipped">Отправлен</div></td>
+                                            </tr>
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-detail-item">
+                                    <div class="order-detail-item__header">
+                                        <div class="order-detail-item__title"><span>5486-1</span></div>
+                                        <div class="order-detail-item__title">07.09.2018</div>
+                                    </div>
+                                    <div class="order-detail-item__container js_scroll-mobile">
+                                        <div class="order-detail-table-wrap">
+                                            <table class="order-detail-table">
+                                                <tr>
+                                                    <th>Наименование товара</th>
+                                                    <th>Количество (кг)</th>
+                                                    <th>Дата отгрузки</th>
+                                                    <th>Статус</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-draft">Черновик</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-consideration">На рассмотрении</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-ready">Готов к отгрузке</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-shipped">Отправлен</div></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-detail-item">
+                                    <div class="order-detail-item__header">
+                                        <div class="order-detail-item__title"><span>5486-1</span></div>
+                                        <div class="order-detail-item__title">07.09.2018</div>
+                                    </div>
+                                    <div class="order-detail-item__container js_scroll-mobile">
+                                        <div class="order-detail-table-wrap">
+                                            <table class="order-detail-table">
+                                                <tr>
+                                                    <th>Наименование товара</th>
+                                                    <th>Количество (кг)</th>
+                                                    <th>Дата отгрузки</th>
+                                                    <th>Статус</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-draft">Черновик</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-consideration">На рассмотрении</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-ready">Готов к отгрузке</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-shipped">Отправлен</div></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-detail-item">
+                                    <div class="order-detail-item__header">
+                                        <div class="order-detail-item__title"><span>5486-1</span></div>
+                                        <div class="order-detail-item__title">07.09.2018</div>
+                                    </div>
+                                    <div class="order-detail-item__container js_scroll-mobile">
+                                        <div class="order-detail-table-wrap">
+                                            <table class="order-detail-table">
+                                                <tr>
+                                                    <th>Наименование товара</th>
+                                                    <th>Количество (кг)</th>
+                                                    <th>Дата отгрузки</th>
+                                                    <th>Статус</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-draft">Черновик</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-consideration">На рассмотрении</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-ready">Готов к отгрузке</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ПК AMIKA RAL 6005 P-PL-1321-Q гладкая глянцевая 21111-00215 (26 кг)</td>
+                                                    <td>700</td>
+                                                    <td>07.09.2018</td>
+                                                    <td><div class="order-item-status order-shipped">Отправлен</div></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        <!-- /новый блок -->
                     </div>
                     <div data-id="date-shipment" class="panel">
                         <div class="panel-aside">

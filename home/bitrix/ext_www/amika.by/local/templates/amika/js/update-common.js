@@ -33,7 +33,6 @@ $(document).ready(function ($) {
     (function () {
         if ($('.js-sale-slider .item').length < 6) {
             $('.js_sale-catalog-btn').hide();
-            $('.sale-catalogue__slider').removeClass('sale-slider-view');
         }
     })();
 
@@ -154,7 +153,8 @@ $(document).ready(function ($) {
             nextArrow: '<div class="droptabs__next"></div>',
             prevArrow: '<div class="droptabs__prev"></div>',
             arrows: true,
-            dots: true
+            dots: true,
+            //variableWidth: true
         };
 
         $('.js--droptabs-data__slider').slick(options)
