@@ -240,7 +240,7 @@ $(document).ready(function ($) {
         smartSpeed: 875, // плавность смены слайда
         navText: ['', ''],
         nav: true,
-        loop: true,
+        loop: false,
         items: 1,
         autoplay: false,
         smartSpeed: 1750, // плавность смены слайда

@@ -32,6 +32,22 @@ $(document).ready(function () {
             $('.sclad-mobile').hide();
         }
     }
+
+    $('.customers-talk-slider').owlCarousel({
+        loop: true,
+        margin: 31,
+        items: 1,
+        dots: true,
+        dotsEach: true,
+        responsive : {
+            680 : {
+                items: 2
+            },
+            1024 : {
+                items: 3
+            }
+        }
+    });
 });
 
 

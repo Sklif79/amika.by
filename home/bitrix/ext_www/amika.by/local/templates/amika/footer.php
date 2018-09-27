@@ -109,14 +109,14 @@ IncludeTemplateLangFile($_SERVER["DOCUMENT_ROOT"] . "/bitrix/templates/" . SITE_
         ); ?>
     </div>
 </footer>
-<?/* $APPLICATION->IncludeComponent(
+<? /* $APPLICATION->IncludeComponent(
     "bitrix:main.include",
     "",
     array(
         "AREA_FILE_SHOW" => "file",
         "PATH" => SITE_DIR . "include/popup/social-fixed.php"),
     false
-); */?>
+); */ ?>
 </div>
 <div id="new-fancybox-overlay"></div>
 <? if (!isset($_COOKIE['modalShowTimer'])) { ?>
@@ -129,6 +129,11 @@ IncludeTemplateLangFile($_SERVER["DOCUMENT_ROOT"] . "/bitrix/templates/" . SITE_
         false
     ); ?>
 <? } ?>
+<div id="fb-modal-1" class="g-modal-win" style="display: none;">
+    <div class="g-modal-win__content store-oform store-modal">
+
+    </div>
+</div>
 <? $APPLICATION->IncludeComponent(
     "bitrix:main.include",
     "",

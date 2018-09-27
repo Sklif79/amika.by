@@ -1001,7 +1001,6 @@
     background: #B3B3B3;
 }
 
-
 @media (max-width: 1024px) {
     .sale-catalogue__slider .item {
         width: -webkit-calc(33.3333% - 15px);
@@ -1107,5 +1106,306 @@
 
     .order-detail-table td:nth-of-type(2), .order-detail-table td:nth-of-type(3), .order-detail-table td:last-of-type, .order-detail-table th {
         width: auto;
+    }
+}
+
+/*what we*/
+.what-we {
+    background: url("../amika/images/what-we-bg.jpg") center no-repeat;
+    background-size: cover;
+    padding: 56px 0;
+}
+
+.what-we .block-title {
+    margin-bottom: 20px;
+}
+
+.what-we-inner {
+    display: flex;
+}
+
+.what-we-left {
+    flex-grow: 1;
+    padding-right: 40px;
+}
+
+.what-we-right {
+    flex: none;
+    width: 460px;
+}
+
+.what-we__btn {
+    height: 50px;
+    display: inline-block;
+    padding: 0 62px;
+    background: #E51F20;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 4px;
+}
+
+.what-we-left__title {
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    line-height: 51px;
+}
+
+.what-we-right__title {
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    line-height: 24px;
+}
+
+.what-we-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.what-we-advantages-item {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.what-we-advantages__img {
+    width: 50px;
+    text-align: center;
+    margin-right: 14px;
+}
+
+.what-we-advantages__description {
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px){
+    .what-we {
+        padding: 30px 0 10px;
+    }
+
+    .what-we-left__title {
+        font-size: 24px;
+        line-height: 31px;
+    }
+
+    .what-we-right__title {
+        font-size: 14px;
+        line-height:normal;
+    }
+
+    .what-we-advantages__description {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .what-we-right {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .what-we-inner {
+        flex-direction: column;
+    }
+
+    .block-title:after {
+        margin: 6px 0 0;
+    }
+
+    .what-we-left {
+        padding-right: 0;
+    }
+
+    .what-we-left__title br {
+        display: none;
+    }
+
+    .what-we-left__title {
+        margin-bottom: 20px;
+    }
+
+    .what-we-right {
+        width: 100%;
+    }
+    
+    .what-we__btn, .what-we__btn:hover {
+        display: block;
+        background: transparent;
+        padding: 0 10px;
+        color: #E31E1E;
+        border: 2px solid #E31E1E;
+        border-radius: 4px;
+        height: 40px;
+        line-height: 36px;
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .what-we-right__title {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .what-we-advantages__img {
+        margin-right: 0;
+        margin-bottom: 12px;
+        width: 40px;
+    }
+
+    .what-we-advantages-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+}
+
+/* customers-talk */
+.customers-talk {
+    background: #EAEAEA;
+    padding: 38px 0 27px;
+}
+
+.customers-talk-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 36px 24px 23px;
+    position: relative;
+    overflow: hidden;
+}
+
+.customers-talk__ico {
+    color: #E51F20;
+    background: #eaeaea;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    transform: rotate(45deg);
+    border-radius: 4px;
+    left: 32px;
+    top: -22px;
+}
+
+.customers-talk__ico span {
+    display: inline-block !important;
+    transform: rotate(-45deg);
+    text-align: center;
+    width: 14px;
+    margin-top: 14px;
+    margin-left: 24px;
+    font-size: 35px;
+}
+
+.customers-talk__txt {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+
+.customers-talk__lnk {
+    color: #E51F20;
+    border-bottom: 1px dotted rgba(229,31,32,.5);
+    font-size: 14px;
+}
+
+.customers-talk__lnk:hover {
+    border-bottom-color: transparent;
+}
+
+.customers-talk-customer {
+    display: flex;
+    border-top: 1px solid #F3F3F3;
+    margin-top: 18px;
+    padding-top: 19px;
+}
+
+.customers-talk-customer__title {
+    font-family: "MyriadPro-Bold", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    margin-bottom: 3px;
+}
+
+.customers-talk-customer__logo {
+    width: 51px;
+    height: 51px;
+    margin-right: 18px;
+    text-align: center;
+}
+
+.customers-talk-customer__logo img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.customers-talk-customer__subtitle {
+    font-size: 14px;
+    color: #A1A1A1;
+    font-family: "MyriadPro-Regular", sans-serif;
+    margin-bottom: 4px;
+}
+
+.customers-talk-customer__name {
+    font-size: 14px;
+    font-family: "MyriadPro-Bold", sans-serif;
+}
+
+.block-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.customers-talk__btn {
+    border: 1px solid #E51F20;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    height: 36px;
+    line-height: 34px;
+    text-align: center;
+    color: #E51F20;
+    padding: 0 39px;
+    margin-top: -6px;
+}
+
+.owl-dots {
+    text-align: center;
+    font-size: 0;
+    margin-top: 20px;
+}
+
+.customers-talk .owl-dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #F63738;
+    margin-right: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.customers-talk .owl-dot.active {
+    background: #F63738;
+}
+
+@media screen and (max-width: 1024px){
+    .customers-talk-item {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
