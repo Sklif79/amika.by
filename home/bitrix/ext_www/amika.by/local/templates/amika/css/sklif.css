@@ -1451,9 +1451,51 @@
     flex-grow: 1;
 }
 
+.short-text {
+    height: 127px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.shortest-text {
+    height: 44px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.read_more {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 992px) {
     .widget-tile__item {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .short-text {
+        height: 190px;
+    }
+
+    .shortest-text {
+        height: 76px;
+    }
+
+    .short-text::after, .shortest-text::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 10px;
+        background: linear-gradient(to top, rgba(255,255,255,.7) 70%, transparent);
+    }
+
+    .about-teaser-amika__wr .short-text::after, .about-teaser-amika__wr .shortest-text::after {
+        background: linear-gradient(to top, rgba(244,244,248,.7) 70%, transparent);
     }
 }
 

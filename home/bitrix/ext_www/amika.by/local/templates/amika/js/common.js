@@ -115,7 +115,6 @@ $(document).ready(function ($) {
 
     })(jQuery);
 
-
 // tooltip
 
     $(document).ready(function () {
@@ -123,6 +122,7 @@ $(document).ready(function ($) {
     });
 
 // Образаем спойлер
+    /*
     jQuery(".text-descr").each(function () {
         var review_full = jQuery(this).html();
         var review = review_full;
@@ -151,6 +151,7 @@ $(document).ready(function ($) {
     jQuery(".read_more").click(function () {
         jQuery(this).parent().html(jQuery(this).parent().find(".full_text").html());
     });
+    */
 
 // Главный слайдер
     $('.js-slider').owlCarousel({
@@ -607,3 +608,45 @@ function simple_tooltip(target_items, name) {
         });
     });
 }
+
+
+$(document).ready(function () {
+    shortText();
+});
+
+$(window).on('resize', function () {
+    shortText();
+});
+
+function shortText() {
+    var isMobile = $(window).width() > 768 ? false : true,
+        textHeigh = 127,
+        smallTextHeight = 44;
+
+    if (isMobile) {
+        textHeigh = 190;
+        smallTextHeight = 76;
+    }
+
+    $('.text-descr').each(function () {
+        if ($(this).height() > textHeigh && !$(this).hasClass('short-text')) {
+            var btn = $('<span class="read_more boder-dott">Читать далее...</span>');
+
+            $(this).addClass('short-text').after(btn);
+        }
+    });
+
+    $('.text-descr-small').each(function () {
+        if ($(this).height() > smallTextHeight && !$(this).hasClass('shortest-text')) {
+            var btn = $('<span class="read_more boder-dott">Читать далее...</span>');
+
+            $(this).addClass('shortest-text').after(btn);
+        }
+    });
+}
+
+$(document).on('click', '.read_more' , function(){
+    $(this).prev().removeClass('shortest-text short-text');
+
+    $(this).remove();
+});
